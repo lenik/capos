@@ -1,0 +1,9 @@
+{
+  "request": {
+    "displayName": ""
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "displayName is required"
+  }
+}

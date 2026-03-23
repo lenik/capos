@@ -1,0 +1,21 @@
+cases:
+  - name: get-existing
+    request:
+      contactId: "con-100"
+    expect:
+      status: "success"
+  - name: get-missing
+    request:
+      contactId: "con-missing"
+    expectError:
+      code: "NOT_FOUND"
+  - name: get-empty-id
+    request:
+      contactId: ""
+    expectError:
+      code: "INVALID_REQUEST"
+  - name: get-malformed-id
+    request:
+      contactId: "   "
+    expectError:
+      code: "INVALID_REQUEST"

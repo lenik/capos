@@ -1,0 +1,12 @@
+{
+  "request": {
+    "contactId": "con-100",
+    "phone": "+1-555-0199"
+  },
+  "response": {
+    "contactId": "con-100",
+    "displayName": "Jordan Smith",
+    "phone": "+1-555-0199",
+    "version": 2
+  }
+}

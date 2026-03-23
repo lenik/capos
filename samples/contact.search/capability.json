@@ -1,0 +1,80 @@
+{
+  "capability": {
+    "name": "contact.search",
+    "version": "1.0.0",
+    "category": "contact",
+    "summary": "Search contacts by text, optional tag, with paging.",
+    "lifecycle": "draft"
+  },
+  "type": "service",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml",
+    "caseFiles": [
+      "tests/cases/search-main.yaml",
+      "tests/cases/search-edge.yaml"
+    ],
+    "casesDirectory": "tests/cases"
+  },
+  "scenarios": [
+    {
+      "id": "crm-link-customer",
+      "title": "Link customer primary contact after contact.create",
+      "category": "functional",
+      "description": "Sales creates a contact, then sets customer.primaryContactId to that contact.",
+      "actors": [
+        "sales_user"
+      ],
+      "relatedCapabilities": [
+        "customer.get",
+        "customer.search",
+        "contact.create"
+      ]
+    },
+    {
+      "id": "supplier-onboarding",
+      "title": "Supplier master references procurement contact",
+      "category": "functional",
+      "description": "Procurement maintains supplier.primaryContactId pointing to contact.get.",
+      "actors": [
+        "procurement_user"
+      ],
+      "relatedCapabilities": [
+        "supplier.get",
+        "contact.get"
+      ]
+    },
+    {
+      "id": "audit-pii-minimization",
+      "title": "Contact fields in audit trail are minimized",
+      "category": "non_functional",
+      "description": "Platform logs contactId and action, not full phone/email body in default audit events.",
+      "nfrTargets": {
+        "auditPayload": "id_and_action_only"
+      }
+    },
+    {
+      "id": "search-rate-limit",
+      "title": "Anonymous contact.search throttled",
+      "category": "non_functional",
+      "description": "Unauthenticated callers receive 429 after sustained search volume.",
+      "nfrTargets": {
+        "maxRpsAnonymous": 5
+      }
+    }
+  ]
+}

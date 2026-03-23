@@ -1,0 +1,9 @@
+{
+  "request": {
+    "contactId": "none"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Contact not found"
+  }
+}

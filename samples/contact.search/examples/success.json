@@ -1,0 +1,20 @@
+{
+  "request": {
+    "query": "jordan",
+    "page": {
+      "limit": 10
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "contactId": "con-100",
+        "displayName": "Jordan Smith",
+        "email": "jordan@example.com"
+      }
+    ],
+    "page": {
+      "hasMore": false
+    }
+  }
+}

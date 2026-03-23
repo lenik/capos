@@ -1,0 +1,19 @@
+cases:
+  - name: search-by-text
+    request:
+      query: "acme"
+      page: {"limit": 10}
+    expect:
+      status: "success"
+  - name: search-empty-query-allowed
+    request:
+      page: {"limit": 5}
+    expect:
+      status: "success"
+  - name: search-tag-filter
+    request:
+      query: "buyer"
+      tag: "vip"
+      page: {"limit": 20}
+    expect:
+      status: "success"

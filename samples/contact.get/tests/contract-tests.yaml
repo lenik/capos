@@ -1,0 +1,11 @@
+tests:
+  - name: contact-get-ok
+    request:
+      contactId: "con-100"
+    expect:
+      status: "success"
+  - name: contact-get-not-found
+    request:
+      contactId: "missing"
+    expectError:
+      code: "NOT_FOUND"

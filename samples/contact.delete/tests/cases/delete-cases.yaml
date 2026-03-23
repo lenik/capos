@@ -1,0 +1,21 @@
+cases:
+  - name: delete-existing
+    request:
+      contactId: "con-100"
+    expect:
+      status: "success"
+  - name: delete-idempotent-second-call
+    request:
+      contactId: "con-100"
+    expect:
+      status: "success"
+  - name: delete-referenced-by-customer
+    request:
+      contactId: "con-in-use"
+    expectError:
+      code: "CONFLICT"
+  - name: delete-not-found
+    request:
+      contactId: "con-none"
+    expectError:
+      code: "NOT_FOUND"

@@ -1,0 +1,9 @@
+{
+  "request": {
+    "contactId": "con-100"
+  },
+  "response": {
+    "deleted": true,
+    "contactId": "con-100"
+  }
+}

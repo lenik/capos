@@ -1,0 +1,13 @@
+tests:
+  - name: contact-update-ok
+    request:
+      contactId: "con-100"
+      displayName: "New"
+    expect:
+      status: "success"
+  - name: contact-update-not-found
+    request:
+      contactId: "missing"
+      displayName: "X"
+    expectError:
+      code: "NOT_FOUND"

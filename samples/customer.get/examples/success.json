@@ -1,0 +1,13 @@
+{
+  "request": {
+    "customerId": "cus-001"
+  },
+  "response": {
+    "customerId": "cus-001",
+    "code": "C001",
+    "name": "Acme Corp",
+    "status": "active",
+    "metadata": {},
+    "primaryContactId": "con-001"
+  }
+}

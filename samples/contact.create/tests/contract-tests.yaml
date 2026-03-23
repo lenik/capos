@@ -1,0 +1,11 @@
+tests:
+  - name: contact-create-ok
+    request:
+      displayName: "Test User"
+    expect:
+      status: "success"
+  - name: contact-create-invalid
+    request:
+      displayName: ""
+    expectError:
+      code: "INVALID_REQUEST"

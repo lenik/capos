@@ -1,0 +1,26 @@
+cases:
+  - name: create-minimal-fields
+    request:
+      displayName: "Pat Lee"
+    expect:
+      status: "success"
+  - name: create-full-profile
+    request:
+      displayName: "Alex Kim"
+      email: "alex@example.com"
+      phone: "+1-555-0100"
+      companyName: "Acme"
+      tags: ["vip", "apac"]
+    expect:
+      status: "success"
+  - name: create-empty-display-name
+    request:
+      displayName: ""
+    expectError:
+      code: "INVALID_REQUEST"
+  - name: create-invalid-email-format
+    request:
+      displayName: "X"
+      email: "not-an-email"
+    expectError:
+      code: "INVALID_REQUEST"

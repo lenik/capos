@@ -1,0 +1,19 @@
+cases:
+  - name: create-duplicate-email
+    request:
+      displayName: "Dup"
+      email: "duplicate@example.com"
+    expectError:
+      code: "CONFLICT"
+  - name: create-unicode-display
+    request:
+      displayName: "\u540d\u524d\u30c6\u30b9\u30c8"
+      companyName: "\u682a\u5f0f\u4f1a\u793e\u8a66\u9a13"
+    expect:
+      status: "success"
+  - name: create-many-tags
+    request:
+      displayName: "Tagged"
+      tags: ["a", "b", "c", "d", "e"]
+    expect:
+      status: "success"

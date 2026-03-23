@@ -1,0 +1,11 @@
+tests:
+  - name: contact-search-ok
+    request:
+      query: "a"
+    expect:
+      status: "success"
+  - name: contact-search-bad-page
+    request:
+      page: {"limit": 0}
+    expectError:
+      code: "INVALID_REQUEST"

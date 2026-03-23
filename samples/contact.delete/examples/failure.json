@@ -1,0 +1,9 @@
+{
+  "request": {
+    "contactId": "con-in-use"
+  },
+  "error": {
+    "code": "CONFLICT",
+    "message": "Contact referenced by party master"
+  }
+}

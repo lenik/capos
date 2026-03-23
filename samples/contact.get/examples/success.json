@@ -1,0 +1,11 @@
+{
+  "request": {
+    "contactId": "con-100"
+  },
+  "response": {
+    "contactId": "con-100",
+    "displayName": "Jordan Smith",
+    "email": "jordan@example.com",
+    "version": 1
+  }
+}

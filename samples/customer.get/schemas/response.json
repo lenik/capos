@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "customerId",
+    "code",
+    "name",
+    "status"
+  ],
+  "properties": {
+    "customerId": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "blocked"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "primaryContactId": {
+      "type": "string",
+      "description": "Primary contact record (contact.*); customers and suppliers reference contacts."
+    }
+  }
+}

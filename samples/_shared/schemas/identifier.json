@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/samples/_shared/schemas/identifier.json",
+  "title": "Business identifier",
+  "description": "Non-empty string id for ERP entities (UUID, snowflake, or prefixed key).",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 128
+}

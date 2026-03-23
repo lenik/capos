@@ -1,0 +1,15 @@
+{
+  "request": {
+    "displayName": "Jordan Smith",
+    "email": "jordan@example.com",
+    "tags": [
+      "buyer"
+    ]
+  },
+  "response": {
+    "contactId": "con-100",
+    "displayName": "Jordan Smith",
+    "email": "jordan@example.com",
+    "version": 1
+  }
+}

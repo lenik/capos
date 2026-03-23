@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/samples/_shared/schemas/search-query.json",
+  "title": "Text search query fragment",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "query": {
+      "type": "string",
+      "description": "Free-text search string."
+    },
+    "page": { "$ref": "page-request.json" },
+    "sort": {
+      "type": "array",
+      "items": { "$ref": "sort-entry.json" },
+      "maxItems": 8
+    }
+  }
+}

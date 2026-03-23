@@ -1,0 +1,19 @@
+cases:
+  - name: search-bad-limit
+    request:
+      query: "x"
+      page: {"limit": 0}
+    expectError:
+      code: "INVALID_REQUEST"
+  - name: search-cursor-roundtrip
+    request:
+      query: "a"
+      page: {"limit": 2, "cursor": "cur-1"}
+    expect:
+      status: "success"
+  - name: search-unicode
+    request:
+      query: "\u540d\u524d"
+      page: {"limit": 10}
+    expect:
+      status: "success"

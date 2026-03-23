@@ -1,0 +1,11 @@
+{
+  "request": {
+    "contactId": "con-100",
+    "expectedVersion": 5,
+    "displayName": "X"
+  },
+  "error": {
+    "code": "CONFLICT",
+    "message": "Version mismatch"
+  }
+}

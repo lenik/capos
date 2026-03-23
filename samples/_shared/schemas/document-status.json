@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/samples/_shared/schemas/document-status.json",
+  "title": "Generic document lifecycle status",
+  "type": "string",
+  "enum": [
+    "draft",
+    "submitted",
+    "pending",
+    "approved",
+    "rejected",
+    "confirmed",
+    "completed",
+    "cancelled",
+    "archived"
+  ]
+}

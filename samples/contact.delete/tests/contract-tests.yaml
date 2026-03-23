@@ -1,0 +1,11 @@
+tests:
+  - name: contact-delete-ok
+    request:
+      contactId: "con-200"
+    expect:
+      status: "success"
+  - name: contact-delete-conflict
+    request:
+      contactId: "con-in-use"
+    expectError:
+      code: "CONFLICT"

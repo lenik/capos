@@ -1,0 +1,32 @@
+cases:
+  - name: update-display-name
+    request:
+      contactId: "con-100"
+      displayName: "Jordan S."
+    expect:
+      status: "success"
+  - name: update-email-only
+    request:
+      contactId: "con-100"
+      email: "new@example.com"
+    expect:
+      status: "success"
+  - name: update-version-mismatch
+    request:
+      contactId: "con-100"
+      displayName: "X"
+      expectedVersion: 99
+    expectError:
+      code: "CONFLICT"
+  - name: update-not-found
+    request:
+      contactId: "missing"
+      displayName: "Nope"
+    expectError:
+      code: "NOT_FOUND"
+  - name: update-clear-phone
+    request:
+      contactId: "con-100"
+      phone: ""
+    expect:
+      status: "success"
