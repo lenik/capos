@@ -3,7 +3,14 @@
     "name": "purchaseOrder.create",
     "version": "1.0.0",
     "category": "purchaseOrder",
-    "summary": "Create a purchase order for a supplier with lines.",
+    "title": {
+      "en": "Create Purchase Order",
+      "zh_CN": "创建采购订单"
+    },
+    "summary": {
+      "en": "Create a purchase order for a supplier with lines.",
+      "zh_CN": "为供应商创建含明细行的采购订单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

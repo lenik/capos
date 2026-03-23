@@ -3,7 +3,14 @@
     "name": "warehouse.get",
     "version": "1.0.0",
     "category": "warehouse",
-    "summary": "Retrieve warehouse or storage location master by id.",
+    "title": {
+      "en": "Get Warehouse",
+      "zh_CN": "获取仓库"
+    },
+    "summary": {
+      "en": "Retrieve warehouse or storage location master by id.",
+      "zh_CN": "按 ID 获取仓库或存储地点主数据。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

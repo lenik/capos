@@ -3,7 +3,14 @@
     "name": "purchaseRequest.get",
     "version": "1.0.0",
     "category": "purchaseRequest",
-    "summary": "Retrieve a purchase requisition by id.",
+    "title": {
+      "en": "Get Purchase Request",
+      "zh_CN": "获取请购单"
+    },
+    "summary": {
+      "en": "Retrieve a purchase requisition by id.",
+      "zh_CN": "按 ID 获取请购单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

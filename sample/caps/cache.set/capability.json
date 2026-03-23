@@ -3,7 +3,14 @@
     "name": "cache.set",
     "version": "1.0.0",
     "category": "cache",
-    "summary": "Store a JSON-serializable value under a namespaced cache key with optional TTL.",
+    "title": {
+      "en": "Set Cache",
+      "zh_CN": "写入缓存"
+    },
+    "summary": {
+      "en": "Store a JSON-serializable value under a namespaced cache key with optional TTL.",
+      "zh_CN": "在命名空间缓存键下存储可 JSON 序列化的值，可选 TTL。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

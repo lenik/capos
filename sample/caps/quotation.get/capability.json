@@ -3,7 +3,14 @@
     "name": "quotation.get",
     "version": "1.0.0",
     "category": "quotation",
-    "summary": "Retrieve quotation header, lines, and status by id.",
+    "title": {
+      "en": "Get Quotation",
+      "zh_CN": "获取报价单"
+    },
+    "summary": {
+      "en": "Retrieve quotation header, lines, and status by id.",
+      "zh_CN": "按 ID 获取报价抬头、行与状态。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

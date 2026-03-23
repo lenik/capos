@@ -3,7 +3,14 @@
     "name": "file.delete",
     "version": "1.0.0",
     "category": "file",
-    "summary": "Delete a stored file by id (irreversible).",
+    "title": {
+      "en": "Delete File",
+      "zh_CN": "删除文件"
+    },
+    "summary": {
+      "en": "Delete a stored file by id (irreversible).",
+      "zh_CN": "按 ID 删除已存储文件（不可恢复）。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

@@ -1,0 +1,11 @@
+{
+  "name": "chatapp-module",
+  "private": true,
+  "description": "chatapp = chatsessionmgr (Python) + chatweb (Vue/TS under web/)",
+  "scripts": {
+    "web:dev": "npm run dev --prefix web",
+    "web:build": "npm run build --prefix web",
+    "web:test": "npm run test --prefix web",
+    "web:test:integration": "npm run test:integration --prefix web"
+  }
+}

@@ -3,7 +3,14 @@
     "name": "receipt.create",
     "version": "1.0.0",
     "category": "receipt",
-    "summary": "Post a goods receipt against a purchase order (inbound confirmation).",
+    "title": {
+      "en": "Create Receipt",
+      "zh_CN": "创建收货单"
+    },
+    "summary": {
+      "en": "Post a goods receipt against a purchase order (inbound confirmation).",
+      "zh_CN": "针对采购订单过账收货（入库确认）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

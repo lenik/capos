@@ -3,7 +3,14 @@
     "name": "approval.action.reject",
     "version": "1.0.0",
     "category": "approval",
-    "summary": "Record a rejection decision on a pending approval request.",
+    "title": {
+      "en": "Reject Request",
+      "zh_CN": "审批拒绝"
+    },
+    "summary": {
+      "en": "Record a rejection decision on a pending approval request.",
+      "zh_CN": "对待处理的审批请求记录拒绝决策。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

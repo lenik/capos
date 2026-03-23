@@ -1,0 +1,506 @@
+{
+  "ap.bill.create": {
+    "title": { "en": "Create AP Bill", "zh_CN": "创建应付账单" },
+    "summary": {
+      "en": "Create a AP bill header with lines for posting.",
+      "zh_CN": "创建含明细行的应付（AP）账单抬头，用于过账。"
+    }
+  },
+  "approval.action.approve": {
+    "title": { "en": "Approve Request", "zh_CN": "审批通过" },
+    "summary": {
+      "en": "Record an approval decision on a pending approval request.",
+      "zh_CN": "对待处理的审批请求记录同意决策。"
+    }
+  },
+  "approval.action.reject": {
+    "title": { "en": "Reject Request", "zh_CN": "审批拒绝" },
+    "summary": {
+      "en": "Record a rejection decision on a pending approval request.",
+      "zh_CN": "对待处理的审批请求记录拒绝决策。"
+    }
+  },
+  "approval.request.create": {
+    "title": { "en": "Create Approval Request", "zh_CN": "创建审批请求" },
+    "summary": {
+      "en": "Start an approval workflow for a business object.",
+      "zh_CN": "为业务对象启动审批流程。"
+    }
+  },
+  "ar.bill.create": {
+    "title": { "en": "Create AR Bill", "zh_CN": "创建应收账单" },
+    "summary": {
+      "en": "Create a AR bill header with lines for posting.",
+      "zh_CN": "创建含明细行的应收（AR）账单抬头，用于过账。"
+    }
+  },
+  "auth.permission.check": {
+    "title": { "en": "Check Permission", "zh_CN": "校验权限" },
+    "summary": {
+      "en": "Evaluate whether the active subject is allowed a permission on an optional resource.",
+      "zh_CN": "判断当前主体是否对可选资源拥有指定权限。"
+    }
+  },
+  "cache.delete": {
+    "title": { "en": "Delete Cache", "zh_CN": "删除缓存" },
+    "summary": {
+      "en": "Remove a key from a cache namespace.",
+      "zh_CN": "从缓存命名空间中移除键。"
+    }
+  },
+  "cache.get": {
+    "title": { "en": "Get Cache", "zh_CN": "读取缓存" },
+    "summary": {
+      "en": "Read a value from a namespaced cache key.",
+      "zh_CN": "按命名空间缓存键读取值。"
+    }
+  },
+  "cache.set": {
+    "title": { "en": "Set Cache", "zh_CN": "写入缓存" },
+    "summary": {
+      "en": "Store a JSON-serializable value under a namespaced cache key with optional TTL.",
+      "zh_CN": "在命名空间缓存键下存储可 JSON 序列化的值，可选 TTL。"
+    }
+  },
+  "chat.ui": {
+    "title": { "en": "Chat Window", "zh_CN": "聊天窗口" },
+    "summary": {
+      "en": "Headless chat window: MVVM command surface for opening a thread with a contact (e.g. supplier primary contact) and sending messages. GUI binds the same commands as tests (no real click events required).",
+      "zh_CN": "无头聊天窗口：MVVM 命令面，用于与联系人（如供应商主联系人）打开会话并发送消息；界面与测试绑定同一套命令，无需真实点击事件。"
+    }
+  },
+  "contact.create": {
+    "title": { "en": "Create Contact", "zh_CN": "创建联系人" },
+    "summary": {
+      "en": "Create a contact record (person or role); referenced by customer.* and supplier.* as primaryContactId.",
+      "zh_CN": "创建联系人（人员或角色）；customer.* / supplier.* 以 primaryContactId 引用。"
+    }
+  },
+  "contact.delete": {
+    "title": { "en": "Delete Contact", "zh_CN": "删除联系人" },
+    "summary": {
+      "en": "Delete a contact; must fail with CONFLICT if still referenced as primaryContactId.",
+      "zh_CN": "删除联系人；若仍被 primaryContactId 引用则必须返回 CONFLICT。"
+    }
+  },
+  "contact.get": {
+    "title": { "en": "Get Contact", "zh_CN": "获取联系人" },
+    "summary": {
+      "en": "Retrieve a contact by id; used when resolving customer.primaryContactId / supplier.primaryContactId.",
+      "zh_CN": "按 ID 获取联系人；用于解析 customer.primaryContactId / supplier.primaryContactId。"
+    }
+  },
+  "contact.search": {
+    "title": { "en": "Search Contacts", "zh_CN": "搜索联系人" },
+    "summary": {
+      "en": "Search contacts by text, optional tag, with paging.",
+      "zh_CN": "按文本、可选标签搜索联系人，支持分页。"
+    }
+  },
+  "contact.update": {
+    "title": { "en": "Update Contact", "zh_CN": "更新联系人" },
+    "summary": {
+      "en": "Patch mutable fields on a contact; optional optimistic expectedVersion.",
+      "zh_CN": "部分更新联系人可变字段；可选乐观锁 expectedVersion。"
+    }
+  },
+  "contract.get": {
+    "title": { "en": "Get Contract", "zh_CN": "获取合同" },
+    "summary": {
+      "en": "Retrieve a contract header (customer, dates, status) by id.",
+      "zh_CN": "按 ID 获取合同抬头（客户、日期、状态）。"
+    }
+  },
+  "customer.get": {
+    "title": { "en": "Get Customer", "zh_CN": "获取客户" },
+    "summary": {
+      "en": "Retrieve a single customer by identifier. Includes primaryContactId linking to contact.* master data.",
+      "zh_CN": "按标识获取单个客户；含 primaryContactId 指向 contact.* 主数据。"
+    }
+  },
+  "customer.search": {
+    "title": { "en": "Search Customers", "zh_CN": "搜索客户" },
+    "summary": {
+      "en": "Search customer records with optional text query and paging. Items may include primaryContactId (contact.*).",
+      "zh_CN": "搜索客户记录，可选文本与分页；结果可含 primaryContactId（contact.*）。"
+    }
+  },
+  "data.csql.query": {
+    "title": { "en": "CSQL Query", "zh_CN": "CSQL 查询" },
+    "summary": {
+      "en": "Execute a catalog-safe constrained SQL (CSQL) query and return a tabular result set.",
+      "zh_CN": "执行目录安全的受限 SQL（CSQL）查询并返回表格式结果。"
+    }
+  },
+  "database.connection.ping": {
+    "title": { "en": "Ping Database Connection", "zh_CN": "数据库连接探活" },
+    "summary": {
+      "en": "Verify a pooled DB connection handle is alive (resource layer; distinct from data.csql.query).",
+      "zh_CN": "验证连接池中的数据库句柄是否可用（资源层；与 data.csql.query 不同）。"
+    }
+  },
+  "dbms.query": {
+    "title": { "en": "DBMS Query", "zh_CN": "数据库查询" },
+    "summary": {
+      "en": "Execute a read-only SQL query and return a tabular result set.",
+      "zh_CN": "执行只读 SQL 查询并返回表格式结果。"
+    }
+  },
+  "dbms.update": {
+    "title": { "en": "DBMS Update", "zh_CN": "数据库更新" },
+    "summary": {
+      "en": "Execute a SQL statement that may mutate database state (INSERT, UPDATE, DELETE, DDL).",
+      "zh_CN": "执行可变更数据库状态的 SQL（INSERT、UPDATE、DELETE、DDL 等）。"
+    }
+  },
+  "event.publish": {
+    "title": { "en": "Publish Event", "zh_CN": "发布事件" },
+    "summary": {
+      "en": "Publish a domain event to the platform event bus for subscribers.",
+      "zh_CN": "向平台事件总线发布领域事件供订阅方消费。"
+    }
+  },
+  "file.delete": {
+    "title": { "en": "Delete File", "zh_CN": "删除文件" },
+    "summary": {
+      "en": "Delete a stored file by id (irreversible).",
+      "zh_CN": "按 ID 删除已存储文件（不可恢复）。"
+    }
+  },
+  "file.download": {
+    "title": { "en": "Download File", "zh_CN": "下载文件" },
+    "summary": {
+      "en": "Resolve a time-limited download URL or transfer handle for a stored file.",
+      "zh_CN": "解析已存储文件的限时下载 URL 或传输句柄。"
+    }
+  },
+  "file.preview": {
+    "title": { "en": "Preview File", "zh_CN": "预览文件" },
+    "summary": {
+      "en": "Obtain a preview URL or rendition for an image or document file.",
+      "zh_CN": "获取图片或文档的预览 URL 或渲染版本。"
+    }
+  },
+  "file.upload": {
+    "title": { "en": "Upload File", "zh_CN": "上传文件" },
+    "summary": {
+      "en": "Register an upload session or accept streamed file metadata and return a stored file id.",
+      "zh_CN": "注册上传会话或接收流式文件元数据并返回存储文件 ID。"
+    }
+  },
+  "gl.account.list": {
+    "title": { "en": "List GL Accounts", "zh_CN": "列总账科目" },
+    "summary": {
+      "en": "List GL accounts matching optional code prefix with paging.",
+      "zh_CN": "按可选科目前缀过滤列总账科目，支持分页。"
+    }
+  },
+  "gl.journal.post": {
+    "title": { "en": "Post GL Journal", "zh_CN": "过账总账凭证" },
+    "summary": {
+      "en": "Post a balanced journal entry to the general ledger.",
+      "zh_CN": "将平衡分录过账到总账。"
+    }
+  },
+  "id.generate": {
+    "title": { "en": "Generate Id", "zh_CN": "生成标识" },
+    "summary": {
+      "en": "Allocate one or more unique identifiers using a server-side scheme.",
+      "zh_CN": "按服务端方案分配一个或多个唯一标识。"
+    }
+  },
+  "identity.current.get": {
+    "title": { "en": "Get Current Identity", "zh_CN": "获取当前身份" },
+    "summary": {
+      "en": "Return the authenticated principal for the active session or token.",
+      "zh_CN": "返回当前会话或令牌对应的已认证主体。"
+    }
+  },
+  "integration.http.send": {
+    "title": { "en": "Send HTTP Integration", "zh_CN": "发送 HTTP 集成" },
+    "summary": {
+      "en": "Outbound HTTP integration call with timeout, headers, and redacted error mapping.",
+      "zh_CN": "出站 HTTP 集成调用，含超时、头部与脱敏错误映射。"
+    }
+  },
+  "integration.webhook.receive": {
+    "title": { "en": "Receive Webhook", "zh_CN": "接收 Webhook" },
+    "summary": {
+      "en": "Accept an inbound webhook: verify provider signature, normalize payload, dedupe by event id.",
+      "zh_CN": "接收入站 Webhook：校验提供方签名、规范化载荷、按事件 ID 去重。"
+    }
+  },
+  "inventory.get": {
+    "title": { "en": "Get Inventory", "zh_CN": "获取库存" },
+    "summary": {
+      "en": "Read on-hand or available quantity for an item at a warehouse.",
+      "zh_CN": "读取某仓库中物料的现有量或可用量。"
+    }
+  },
+  "inventory.inbound": {
+    "title": { "en": "Inventory Inbound", "zh_CN": "库存入库" },
+    "summary": {
+      "en": "Post inbound stock (receipt) for an item at a warehouse.",
+      "zh_CN": "为某仓库物料过账入库（收货）。"
+    }
+  },
+  "inventory.outbound": {
+    "title": { "en": "Inventory Outbound", "zh_CN": "库存出库" },
+    "summary": {
+      "en": "Post outbound stock (issue) for an item at a warehouse.",
+      "zh_CN": "为某仓库物料过账出库（发料）。"
+    }
+  },
+  "inventory.reserve": {
+    "title": { "en": "Reserve Inventory", "zh_CN": "预留库存" },
+    "summary": {
+      "en": "Reserve quantity for an item at a warehouse (e.g. for a sales line).",
+      "zh_CN": "在某仓库为物料预留数量（如销售行）。"
+    }
+  },
+  "inventory.transfer": {
+    "title": { "en": "Transfer Inventory", "zh_CN": "库存调拨" },
+    "summary": {
+      "en": "Transfer quantity for an item between two warehouses.",
+      "zh_CN": "在两仓库之间调拨物料数量。"
+    }
+  },
+  "invoice.create": {
+    "title": { "en": "Create Invoice", "zh_CN": "创建发票" },
+    "summary": {
+      "en": "Create an AR invoice from billing lines and customer reference.",
+      "zh_CN": "根据计费行与客户引用创建应收发票。"
+    }
+  },
+  "item.get": {
+    "title": { "en": "Get Item", "zh_CN": "获取物料" },
+    "summary": {
+      "en": "Retrieve a single item by identifier.",
+      "zh_CN": "按标识获取单个物料。"
+    }
+  },
+  "item.search": {
+    "title": { "en": "Search Items", "zh_CN": "搜索物料" },
+    "summary": {
+      "en": "Search item/SKU master data with optional filters and paging.",
+      "zh_CN": "搜索物料/SKU 主数据，可选过滤与分页。"
+    }
+  },
+  "object.delete": {
+    "title": { "en": "Delete Object", "zh_CN": "删除对象" },
+    "summary": {
+      "en": "Delete an object from a bucket/key namespace.",
+      "zh_CN": "从桶/键命名空间删除对象。"
+    }
+  },
+  "object.get": {
+    "title": { "en": "Get Object", "zh_CN": "获取对象" },
+    "summary": {
+      "en": "Resolve a time-limited URL or read handle for an object in storage.",
+      "zh_CN": "解析存储中对象的限时 URL 或读句柄。"
+    }
+  },
+  "object.put": {
+    "title": { "en": "Put Object", "zh_CN": "上传对象" },
+    "summary": {
+      "en": "Register or complete put of an object into a bucket/key namespace.",
+      "zh_CN": "注册或完成将对象写入桶/键命名空间。"
+    }
+  },
+  "on.salesOrder.confirmed": {
+    "title": { "en": "On Sales Order Confirmed", "zh_CN": "销售订单已确认事件" },
+    "summary": {
+      "en": "Consume domain event when a sales order reaches confirmed state (milestone handler).",
+      "zh_CN": "当销售订单进入已确认状态时消费领域事件（里程碑处理器）。"
+    }
+  },
+  "org.unit.get": {
+    "title": { "en": "Get Organization Unit", "zh_CN": "获取组织单元" },
+    "summary": {
+      "en": "Retrieve an organization unit (cost center, department, legal entity node) by id.",
+      "zh_CN": "按 ID 获取组织单元（成本中心、部门、法人节点等）。"
+    }
+  },
+  "org.unit.list": {
+    "title": { "en": "List Organization Units", "zh_CN": "列组织单元" },
+    "summary": {
+      "en": "List organization units visible to the caller with optional parent filter and paging.",
+      "zh_CN": "列出调用方可见的组织单元，可选父级过滤与分页。"
+    }
+  },
+  "payment.execute": {
+    "title": { "en": "Execute Payment", "zh_CN": "执行支付" },
+    "summary": {
+      "en": "Execute a payment against a payable or receivable instrument.",
+      "zh_CN": "针对应付或应收票据执行支付。"
+    }
+  },
+  "purchaseOrder.create": {
+    "title": { "en": "Create Purchase Order", "zh_CN": "创建采购订单" },
+    "summary": {
+      "en": "Create a purchase order for a supplier with lines.",
+      "zh_CN": "为供应商创建含明细行的采购订单。"
+    }
+  },
+  "purchaseOrder.get": {
+    "title": { "en": "Get Purchase Order", "zh_CN": "获取采购订单" },
+    "summary": {
+      "en": "Retrieve purchase order by identifier.",
+      "zh_CN": "按标识获取采购订单。"
+    }
+  },
+  "purchaseRequest.create": {
+    "title": { "en": "Create Purchase Request", "zh_CN": "创建请购单" },
+    "summary": {
+      "en": "Create an internal purchase requisition with requested lines.",
+      "zh_CN": "创建含明细的内部请购单。"
+    }
+  },
+  "purchaseRequest.get": {
+    "title": { "en": "Get Purchase Request", "zh_CN": "获取请购单" },
+    "summary": {
+      "en": "Retrieve a purchase requisition by id.",
+      "zh_CN": "按 ID 获取请购单。"
+    }
+  },
+  "queue.consume": {
+    "title": { "en": "Consume Queue", "zh_CN": "消费队列" },
+    "summary": {
+      "en": "Pull up to N messages from a subscription with optional visibility timeout.",
+      "zh_CN": "从订阅拉取最多 N 条消息，可选可见性超时。"
+    }
+  },
+  "queue.publish": {
+    "title": { "en": "Publish Queue", "zh_CN": "发布队列" },
+    "summary": {
+      "en": "Publish a message to a topic or queue endpoint.",
+      "zh_CN": "向主题或队列端点发布消息。"
+    }
+  },
+  "quotation.create": {
+    "title": { "en": "Create Quotation", "zh_CN": "创建报价单" },
+    "summary": {
+      "en": "Create a sales quotation with lines and optional validity date.",
+      "zh_CN": "创建含明细行的销售报价，可选有效期。"
+    }
+  },
+  "quotation.get": {
+    "title": { "en": "Get Quotation", "zh_CN": "获取报价单" },
+    "summary": {
+      "en": "Retrieve quotation header, lines, and status by id.",
+      "zh_CN": "按 ID 获取报价抬头、行与状态。"
+    }
+  },
+  "receipt.create": {
+    "title": { "en": "Create Receipt", "zh_CN": "创建收货单" },
+    "summary": {
+      "en": "Post a goods receipt against a purchase order (inbound confirmation).",
+      "zh_CN": "针对采购订单过账收货（入库确认）。"
+    }
+  },
+  "receipt.get": {
+    "title": { "en": "Get Receipt", "zh_CN": "获取收货单" },
+    "summary": {
+      "en": "Retrieve a goods receipt by id.",
+      "zh_CN": "按 ID 获取收货单。"
+    }
+  },
+  "salesOrder.create": {
+    "title": { "en": "Create Sales Order", "zh_CN": "创建销售订单" },
+    "summary": {
+      "en": "Create a sales order in draft or submitted state from header and lines.",
+      "zh_CN": "根据抬头与行创建草稿或已提交状态的销售订单。"
+    }
+  },
+  "salesOrder.get": {
+    "title": { "en": "Get Sales Order", "zh_CN": "获取销售订单" },
+    "summary": {
+      "en": "Retrieve sales order header, lines, and status by id.",
+      "zh_CN": "按 ID 获取销售订单表头、行和状态。"
+    }
+  },
+  "shipment.create": {
+    "title": { "en": "Create Shipment", "zh_CN": "创建发运单" },
+    "summary": {
+      "en": "Create an outbound shipment from a sales order reference and picked lines.",
+      "zh_CN": "根据销售订单引用与已拣货行创建出库发运。"
+    }
+  },
+  "shipment.get": {
+    "title": { "en": "Get Shipment", "zh_CN": "获取发运单" },
+    "summary": {
+      "en": "Retrieve shipment header, carrier info, and lines by id.",
+      "zh_CN": "按 ID 获取发运抬头、承运商与明细行。"
+    }
+  },
+  "supplier.get": {
+    "title": { "en": "Get Supplier", "zh_CN": "获取供应商" },
+    "summary": {
+      "en": "Retrieve a single supplier by identifier. Includes primaryContactId linking to contact.* master data.",
+      "zh_CN": "按标识获取单个供应商；含 primaryContactId 指向 contact.* 主数据。"
+    }
+  },
+  "supplier.search": {
+    "title": { "en": "Search Suppliers", "zh_CN": "搜索供应商" },
+    "summary": {
+      "en": "Search supplier records with optional text query and paging. Items may include primaryContactId (contact.*).",
+      "zh_CN": "搜索供应商记录，可选文本与分页；结果可含 primaryContactId（contact.*）。"
+    }
+  },
+  "task.create": {
+    "title": { "en": "Create Task", "zh_CN": "创建任务" },
+    "summary": {
+      "en": "Create a workflow or work item task assigned to users or roles.",
+      "zh_CN": "创建分配给用户或角色的工作流/工作项任务。"
+    }
+  },
+  "task.list": {
+    "title": { "en": "List Tasks", "zh_CN": "列任务" },
+    "summary": {
+      "en": "List tasks for the caller with optional status filter and paging.",
+      "zh_CN": "列出调用方任务，可选状态过滤与分页。"
+    }
+  },
+  "ui.view.salesOrder.detail": {
+    "title": { "en": "Sales Order Detail View", "zh_CN": "销售订单明细视图" },
+    "summary": {
+      "en": "Read-only sales order detail view: header, lines, and bound backend capabilities.",
+      "zh_CN": "只读销售订单明细视图：表头、行及绑定的后端能力。"
+    }
+  },
+  "ui.widget.contact.selector": {
+    "title": { "en": "Contact Selector Widget", "zh_CN": "联系人选择器" },
+    "summary": {
+      "en": "Embeddable contact picker: resolve UI state, optional search, and selected customer id.",
+      "zh_CN": "可嵌入联系人选择器：解析 UI 状态、可选搜索与所选客户 ID。"
+    }
+  },
+  "warehouse.get": {
+    "title": { "en": "Get Warehouse", "zh_CN": "获取仓库" },
+    "summary": {
+      "en": "Retrieve warehouse or storage location master by id.",
+      "zh_CN": "按 ID 获取仓库或存储地点主数据。"
+    }
+  },
+  "warehouse.list": {
+    "title": { "en": "List Warehouses", "zh_CN": "列仓库" },
+    "summary": {
+      "en": "List warehouses visible to the caller with paging.",
+      "zh_CN": "按分页列出调用方可见的仓库。"
+    }
+  },
+  "workOrder.create": {
+    "title": { "en": "Create Work Order", "zh_CN": "创建工单" },
+    "summary": {
+      "en": "Create a manufacturing work order for an item and quantity.",
+      "zh_CN": "为某物料与数量创建制造工单。"
+    }
+  },
+  "workOrder.get": {
+    "title": { "en": "Get Work Order", "zh_CN": "获取工单" },
+    "summary": {
+      "en": "Retrieve work order status, quantity, and plant by id.",
+      "zh_CN": "按 ID 获取工单状态、数量与工厂。"
+    }
+  }
+}

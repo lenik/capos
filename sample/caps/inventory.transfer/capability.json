@@ -3,7 +3,14 @@
     "name": "inventory.transfer",
     "version": "1.0.0",
     "category": "inventory",
-    "summary": "Transfer quantity for an item between two warehouses.",
+    "title": {
+      "en": "Transfer Inventory",
+      "zh_CN": "库存调拨"
+    },
+    "summary": {
+      "en": "Transfer quantity for an item between two warehouses.",
+      "zh_CN": "在两仓库之间调拨物料数量。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

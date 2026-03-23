@@ -3,7 +3,14 @@
     "name": "purchaseOrder.get",
     "version": "1.0.0",
     "category": "purchaseOrder",
-    "summary": "Retrieve purchase order by identifier.",
+    "title": {
+      "en": "Get Purchase Order",
+      "zh_CN": "获取采购订单"
+    },
+    "summary": {
+      "en": "Retrieve purchase order by identifier.",
+      "zh_CN": "按标识获取采购订单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

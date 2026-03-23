@@ -1,0 +1,24 @@
+{
+  "$schema": "../../../schemas/modulespec.schema.json",
+  "module": {
+    "id": "postgresdb",
+    "name": "PostgreSQL DBMS",
+    "version": "1.0.0",
+    "description": "Implements dbms.query and dbms.update against PostgreSQL (CAP_POSTGRESDB_URL). Requires psycopg.",
+    "runtime": {
+      "language": "python",
+      "packagePath": "postgresdb",
+      "entry": "postgresdb.impl:build_handlers"
+    },
+    "implements": ["dbms.query", "dbms.update"],
+    "requiresCapabilities": [],
+    "lifecycle": {
+      "handlesPlatformLifecycle": false
+    }
+  },
+  "deployment": {
+    "environment": {
+      "CAP_POSTGRESDB_URL": "PostgreSQL connection URI (secret)."
+    }
+  }
+}

@@ -3,7 +3,14 @@
     "name": "contract.get",
     "version": "1.0.0",
     "category": "contract",
-    "summary": "Retrieve a contract header (customer, dates, status) by id.",
+    "title": {
+      "en": "Get Contract",
+      "zh_CN": "获取合同"
+    },
+    "summary": {
+      "en": "Retrieve a contract header (customer, dates, status) by id.",
+      "zh_CN": "按 ID 获取合同抬头（客户、日期、状态）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -3,8 +3,15 @@
     "name": "dbms.update",
     "version": "1.0.0",
     "category": "dbms",
-    "summary": "Execute a SQL statement that may mutate database state (INSERT, UPDATE, DELETE, DDL).",
-    "lifecycle": "draft"
+    "summary": {
+      "en": "Execute a SQL statement that may mutate database state (INSERT, UPDATE, DELETE, DDL).",
+      "zh_CN": "执行可变更数据库状态的 SQL（INSERT、UPDATE、DELETE、DDL 等）。"
+    },
+    "lifecycle": "draft",
+    "title": {
+      "en": "DBMS Update",
+      "zh_CN": "数据库更新"
+    }
   },
   "type": "data",
   "runtime": {

@@ -3,7 +3,14 @@
     "name": "contact.delete",
     "version": "1.0.0",
     "category": "contact",
-    "summary": "Delete a contact; must fail with CONFLICT if still referenced as primaryContactId.",
+    "title": {
+      "en": "Delete Contact",
+      "zh_CN": "删除联系人"
+    },
+    "summary": {
+      "en": "Delete a contact; must fail with CONFLICT if still referenced as primaryContactId.",
+      "zh_CN": "删除联系人；若仍被 primaryContactId 引用则必须返回 CONFLICT。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

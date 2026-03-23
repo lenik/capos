@@ -3,7 +3,14 @@
     "name": "quotation.create",
     "version": "1.0.0",
     "category": "quotation",
-    "summary": "Create a sales quotation with lines and optional validity date.",
+    "title": {
+      "en": "Create Quotation",
+      "zh_CN": "创建报价单"
+    },
+    "summary": {
+      "en": "Create a sales quotation with lines and optional validity date.",
+      "zh_CN": "创建含明细行的销售报价，可选有效期。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

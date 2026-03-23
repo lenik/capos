@@ -3,7 +3,14 @@
     "name": "shipment.get",
     "version": "1.0.0",
     "category": "shipment",
-    "summary": "Retrieve shipment header, carrier info, and lines by id.",
+    "title": {
+      "en": "Get Shipment",
+      "zh_CN": "获取发运单"
+    },
+    "summary": {
+      "en": "Retrieve shipment header, carrier info, and lines by id.",
+      "zh_CN": "按 ID 获取发运抬头、承运商与明细行。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -15,7 +15,7 @@
       "contact.get",
       "contact.update",
       "contact.delete",
-      "contact.list"
+      "contact.search"
     ],
     "requiresCapabilities": [],
     "lifecycle": {

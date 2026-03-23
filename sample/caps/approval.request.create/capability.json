@@ -3,7 +3,14 @@
     "name": "approval.request.create",
     "version": "1.0.0",
     "category": "approval",
-    "summary": "Start an approval workflow for a business object.",
+    "title": {
+      "en": "Create Approval Request",
+      "zh_CN": "创建审批请求"
+    },
+    "summary": {
+      "en": "Start an approval workflow for a business object.",
+      "zh_CN": "为业务对象启动审批流程。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

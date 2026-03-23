@@ -3,7 +3,14 @@
     "name": "contact.create",
     "version": "1.0.0",
     "category": "contact",
-    "summary": "Create a contact record (person or role); referenced by customer.* and supplier.* as primaryContactId.",
+    "title": {
+      "en": "Create Contact",
+      "zh_CN": "创建联系人"
+    },
+    "summary": {
+      "en": "Create a contact record (person or role); referenced by customer.* and supplier.* as primaryContactId.",
+      "zh_CN": "创建联系人（人员或角色）；customer.* / supplier.* 以 primaryContactId 引用。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

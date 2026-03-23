@@ -3,7 +3,14 @@
     "name": "database.connection.ping",
     "version": "1.0.0",
     "category": "database",
-    "summary": "Verify a pooled DB connection handle is alive (resource layer; distinct from data.csql.query).",
+    "title": {
+      "en": "Ping Database Connection",
+      "zh_CN": "数据库连接探活"
+    },
+    "summary": {
+      "en": "Verify a pooled DB connection handle is alive (resource layer; distinct from data.csql.query).",
+      "zh_CN": "验证连接池中的数据库句柄是否可用（资源层；与 data.csql.query 不同）。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

@@ -3,7 +3,14 @@
     "name": "org.unit.get",
     "version": "1.0.0",
     "category": "org",
-    "summary": "Retrieve an organization unit (cost center, department, legal entity node) by id.",
+    "title": {
+      "en": "Get Organization Unit",
+      "zh_CN": "获取组织单元"
+    },
+    "summary": {
+      "en": "Retrieve an organization unit (cost center, department, legal entity node) by id.",
+      "zh_CN": "按 ID 获取组织单元（成本中心、部门、法人节点等）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

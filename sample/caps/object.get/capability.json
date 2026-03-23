@@ -3,7 +3,14 @@
     "name": "object.get",
     "version": "1.0.0",
     "category": "object",
-    "summary": "Resolve a time-limited URL or read handle for an object in storage.",
+    "title": {
+      "en": "Get Object",
+      "zh_CN": "获取对象"
+    },
+    "summary": {
+      "en": "Resolve a time-limited URL or read handle for an object in storage.",
+      "zh_CN": "解析存储中对象的限时 URL 或读句柄。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

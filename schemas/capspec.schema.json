@@ -4,6 +4,16 @@
   "title": "CapSpec",
   "description": "JSON Schema for the Capability Description Specification (capability.json).",
   "type": "object",
+  "$defs": {
+    "i18nText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Localized strings. Keys are locale tags (e.g. en, zh_CN). At least one locale required; en is recommended as the default."
+    }
+  },
   "additionalProperties": false,
   "required": ["capability", "type", "signature", "semantics"],
   "properties": {
@@ -33,7 +43,7 @@
     "capability": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "version"],
+      "required": ["name", "version", "title", "summary"],
       "properties": {
         "name": {
           "type": "string",
@@ -50,9 +60,11 @@
           "type": "string",
           "description": "Grouping label, often the domain segment."
         },
+        "title": {
+          "$ref": "#/$defs/i18nText"
+        },
         "summary": {
-          "type": "string",
-          "description": "Short human-readable description."
+          "$ref": "#/$defs/i18nText"
         },
         "lifecycle": {
           "type": "string",

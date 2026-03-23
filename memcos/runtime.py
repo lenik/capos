@@ -36,7 +36,8 @@ class EventBus:
 class MemCOS:
     """In-memory capability registry with routing and module lifecycle."""
 
-    def __init__(self) -> None:
+    def __init__(self, environment: Mapping[str, str] | None = None) -> None:
+        self.environment: dict[str, str] = dict(environment or {})
         self.bus = EventBus()
         self._handlers: dict[str, CapabilityFn] = {}
         self._owner: dict[str, str] = {}

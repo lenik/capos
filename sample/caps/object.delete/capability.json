@@ -3,7 +3,14 @@
     "name": "object.delete",
     "version": "1.0.0",
     "category": "object",
-    "summary": "Delete an object from a bucket/key namespace.",
+    "title": {
+      "en": "Delete Object",
+      "zh_CN": "删除对象"
+    },
+    "summary": {
+      "en": "Delete an object from a bucket/key namespace.",
+      "zh_CN": "从桶/键命名空间删除对象。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

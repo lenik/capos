@@ -3,7 +3,14 @@
     "name": "data.csql.query",
     "version": "1.0.0",
     "category": "data",
-    "summary": "Execute a catalog-safe constrained SQL (CSQL) query and return a tabular result set.",
+    "title": {
+      "en": "CSQL Query",
+      "zh_CN": "CSQL 查询"
+    },
+    "summary": {
+      "en": "Execute a catalog-safe constrained SQL (CSQL) query and return a tabular result set.",
+      "zh_CN": "执行目录安全的受限 SQL（CSQL）查询并返回表格式结果。"
+    },
     "lifecycle": "draft"
   },
   "type": "data",

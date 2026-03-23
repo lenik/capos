@@ -3,7 +3,14 @@
     "name": "purchaseRequest.create",
     "version": "1.0.0",
     "category": "purchaseRequest",
-    "summary": "Create an internal purchase requisition with requested lines.",
+    "title": {
+      "en": "Create Purchase Request",
+      "zh_CN": "创建请购单"
+    },
+    "summary": {
+      "en": "Create an internal purchase requisition with requested lines.",
+      "zh_CN": "创建含明细的内部请购单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

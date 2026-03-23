@@ -3,7 +3,14 @@
     "name": "ui.widget.contact.selector",
     "version": "1.0.0",
     "category": "customer",
-    "summary": "Embeddable contact picker: resolve UI state, optional search, and selected customer id.",
+    "title": {
+      "en": "Contact Selector Widget",
+      "zh_CN": "联系人选择器"
+    },
+    "summary": {
+      "en": "Embeddable contact picker: resolve UI state, optional search, and selected customer id.",
+      "zh_CN": "可嵌入联系人选择器：解析 UI 状态、可选搜索与所选客户 ID。"
+    },
     "lifecycle": "draft"
   },
   "type": "ui",

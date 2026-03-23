@@ -3,7 +3,14 @@
     "name": "payment.execute",
     "version": "1.0.0",
     "category": "payment",
-    "summary": "Execute a payment against a payable or receivable instrument.",
+    "title": {
+      "en": "Execute Payment",
+      "zh_CN": "执行支付"
+    },
+    "summary": {
+      "en": "Execute a payment against a payable or receivable instrument.",
+      "zh_CN": "针对应付或应收票据执行支付。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

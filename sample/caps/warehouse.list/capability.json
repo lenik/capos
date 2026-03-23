@@ -3,7 +3,14 @@
     "name": "warehouse.list",
     "version": "1.0.0",
     "category": "warehouse",
-    "summary": "List warehouses visible to the caller with paging.",
+    "title": {
+      "en": "List Warehouses",
+      "zh_CN": "列仓库"
+    },
+    "summary": {
+      "en": "List warehouses visible to the caller with paging.",
+      "zh_CN": "按分页列出调用方可见的仓库。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

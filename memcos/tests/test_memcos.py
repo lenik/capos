@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from util.memcos import MemCOS, PLATFORM_LIFECYCLE_EVENTS
+from memcos import MemCOS, PLATFORM_LIFECYCLE_EVENTS
 
 
 def test_invoke_routes_to_handler():
@@ -75,7 +75,7 @@ def test_upgrade_emits_preupgrade_and_upgraded():
 
 
 def test_modulespec_example_validates():
-    root = Path(__file__).resolve().parents[3]
+    root = Path(__file__).resolve().parents[2]
     schema_path = root / "schemas" / "modulespec.schema.json"
     example = root / "sample" / "modules" / "contactbook" / "modulespec.json"
     try:

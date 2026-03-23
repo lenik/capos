@@ -1,0 +1,27 @@
+{
+  "$schema": "../../../schemas/modulespec.schema.json",
+  "module": {
+    "id": "chatapp",
+    "name": "Chat (reference)",
+    "version": "0.1.0",
+    "description": "chat.ui: chatsessionmgr (Python) + chatweb (Vue/TS under web/). HTTP server serves POST /api/chat/ui and web/dist; see README.md.",
+    "runtime": {
+      "language": "python",
+      "packagePath": "chatapp",
+      "entry": "chatapp.impl:ChatApp"
+    },
+    "implements": ["chat.ui"],
+    "requiresCapabilities": [
+      "contact.get",
+      "contact.search",
+      "dbms.query",
+      "dbms.update"
+    ],
+    "lifecycle": {
+      "handlesPlatformLifecycle": true
+    }
+  },
+  "deployment": {
+    "notes": "Install sqlitedb (or postgresdb) and contactbook before chatapp. For UI: npm install && npm run build in web/, point http_server static_root to web/dist. Full COS may use subprocess or thread pool per module; memcos stays in-process."
+  }
+}

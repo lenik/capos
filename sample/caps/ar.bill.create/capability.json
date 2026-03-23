@@ -3,7 +3,14 @@
     "name": "ar.bill.create",
     "version": "1.0.0",
     "category": "ar",
-    "summary": "Create a AR bill header with lines for posting.",
+    "title": {
+      "en": "Create AR Bill",
+      "zh_CN": "创建应收账单"
+    },
+    "summary": {
+      "en": "Create a AR bill header with lines for posting.",
+      "zh_CN": "创建含明细行的应收（AR）账单抬头，用于过账。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

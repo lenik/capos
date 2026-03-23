@@ -2,7 +2,7 @@
   "request": {
     "command": "chat.openWindow",
     "params": {
-      "primaryContactId": "missing-id"
+      "primaryContactId": "no-such-contact"
     }
   },
   "error": {

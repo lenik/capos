@@ -3,7 +3,14 @@
     "name": "integration.http.send",
     "version": "1.0.0",
     "category": "integration",
-    "summary": "Outbound HTTP integration call with timeout, headers, and redacted error mapping.",
+    "title": {
+      "en": "Send HTTP Integration",
+      "zh_CN": "发送 HTTP 集成"
+    },
+    "summary": {
+      "en": "Outbound HTTP integration call with timeout, headers, and redacted error mapping.",
+      "zh_CN": "出站 HTTP 集成调用，含超时、头部与脱敏错误映射。"
+    },
     "lifecycle": "draft"
   },
   "type": "integration",

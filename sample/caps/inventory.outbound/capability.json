@@ -3,7 +3,14 @@
     "name": "inventory.outbound",
     "version": "1.0.0",
     "category": "inventory",
-    "summary": "Post outbound stock (issue) for an item at a warehouse.",
+    "title": {
+      "en": "Inventory Outbound",
+      "zh_CN": "库存出库"
+    },
+    "summary": {
+      "en": "Post outbound stock (issue) for an item at a warehouse.",
+      "zh_CN": "为某仓库物料过账出库（发料）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

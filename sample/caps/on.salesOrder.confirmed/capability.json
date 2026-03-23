@@ -3,7 +3,14 @@
     "name": "on.salesOrder.confirmed",
     "version": "1.0.0",
     "category": "salesOrder",
-    "summary": "Consume domain event when a sales order reaches confirmed state (milestone handler).",
+    "title": {
+      "en": "On Sales Order Confirmed",
+      "zh_CN": "销售订单已确认事件"
+    },
+    "summary": {
+      "en": "Consume domain event when a sales order reaches confirmed state (milestone handler).",
+      "zh_CN": "当销售订单进入已确认状态时消费领域事件（里程碑处理器）。"
+    },
     "lifecycle": "draft"
   },
   "type": "event-handler",

@@ -1,0 +1,24 @@
+{
+  "$schema": "../../../schemas/modulespec.schema.json",
+  "module": {
+    "id": "sqlitedb",
+    "name": "SQLite DBMS",
+    "version": "1.0.0",
+    "description": "Implements dbms.query and dbms.update against a SQLite file (CAP_SQLITEDB_PATH).",
+    "runtime": {
+      "language": "python",
+      "packagePath": "sqlitedb",
+      "entry": "sqlitedb.impl:build_handlers"
+    },
+    "implements": ["dbms.query", "dbms.update"],
+    "requiresCapabilities": [],
+    "lifecycle": {
+      "handlesPlatformLifecycle": false
+    }
+  },
+  "deployment": {
+    "environment": {
+      "CAP_SQLITEDB_PATH": "Path to SQLite database file."
+    }
+  }
+}

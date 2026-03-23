@@ -3,7 +3,14 @@
     "name": "shipment.create",
     "version": "1.0.0",
     "category": "shipment",
-    "summary": "Create an outbound shipment from a sales order reference and picked lines.",
+    "title": {
+      "en": "Create Shipment",
+      "zh_CN": "创建发运单"
+    },
+    "summary": {
+      "en": "Create an outbound shipment from a sales order reference and picked lines.",
+      "zh_CN": "根据销售订单引用与已拣货行创建出库发运。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -3,7 +3,14 @@
     "name": "on.__DOMAIN__.__EVENT__",
     "version": "1.0.0",
     "category": "__DOMAIN__",
-    "summary": "Consume __EVENT__ domain events.",
+    "title": {
+      "en": "On __EVENT__",
+      "zh_CN": "__EVENT__ 事件"
+    },
+    "summary": {
+      "en": "Consume __EVENT__ domain events.",
+      "zh_CN": "消费 __EVENT__ 领域事件。"
+    },
     "lifecycle": "draft"
   },
   "type": "event-handler",

@@ -3,7 +3,14 @@
     "name": "file.download",
     "version": "1.0.0",
     "category": "file",
-    "summary": "Resolve a time-limited download URL or transfer handle for a stored file.",
+    "title": {
+      "en": "Download File",
+      "zh_CN": "下载文件"
+    },
+    "summary": {
+      "en": "Resolve a time-limited download URL or transfer handle for a stored file.",
+      "zh_CN": "解析已存储文件的限时下载 URL 或传输句柄。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

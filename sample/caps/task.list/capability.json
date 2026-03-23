@@ -3,7 +3,14 @@
     "name": "task.list",
     "version": "1.0.0",
     "category": "task",
-    "summary": "List tasks for the caller with optional status filter and paging.",
+    "title": {
+      "en": "List Tasks",
+      "zh_CN": "列任务"
+    },
+    "summary": {
+      "en": "List tasks for the caller with optional status filter and paging.",
+      "zh_CN": "列出调用方任务，可选状态过滤与分页。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

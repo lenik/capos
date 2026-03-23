@@ -3,7 +3,14 @@
     "name": "workOrder.create",
     "version": "1.0.0",
     "category": "workOrder",
-    "summary": "Create a manufacturing work order for an item and quantity.",
+    "title": {
+      "en": "Create Work Order",
+      "zh_CN": "创建工单"
+    },
+    "summary": {
+      "en": "Create a manufacturing work order for an item and quantity.",
+      "zh_CN": "为某物料与数量创建制造工单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -124,7 +124,14 @@ Example structure:
     "name": "contact.get",
     "version": "1.0.0",
     "category": "contact",
-    "summary": "Retrieve a contact by identifier"
+    "title": {
+      "en": "Get Contact",
+      "zh_CN": "获取联系人"
+    },
+    "summary": {
+      "en": "Retrieve a contact by id; used when resolving customer.primaryContactId / supplier.primaryContactId.",
+      "zh_CN": "按 ID 获取联系人；用于解析 customer.primaryContactId / supplier.primaryContactId。"
+    }
   },
 
   "type": "service",
@@ -151,6 +158,8 @@ Example structure:
   }
 }
 ````
+
+**Title and summary** use the same **locale map** shape (`i18nText` in `schemas/capspec.schema.json`): each key is a locale tag (e.g. `en`, `zh_CN`); values are UTF-8 strings. At least one locale is required; the sample registry provides **English** and **Simplified Chinese** for every capability. Regenerating from `scripts/generate_erp_modules.py` merges text from `scripts/data/capability_i18n.json` when present.
 
 ### 5.1 ERP module directory layout
 
@@ -452,7 +461,9 @@ Draft → Stable → Deprecated → Retired
 
 # 15. Module implementations and platform references
 
-Implementation modules (any language) are described by **ModuleSpec** (`spec/modulespec.md`, `schemas/modulespec.schema.json`); examples live under `sample/modules/`. The **memcos** reference runtime (`spec/memcos.md`, `util/memcos/`) provides in-memory capability routing, platform lifecycle events (`module.installed`, …), and an event bus for tests and demos.
+Implementation modules (any language) are described by **ModuleSpec** (`spec/modulespec.md`, `schemas/modulespec.schema.json`); examples live under `sample/modules/`. The **memcos** reference runtime (`spec/memcos.md`, `memcos/`) provides in-memory capability routing, platform lifecycle events (`module.installed`, …), and an event bus for tests and demos.
+
+CapSpecs may declare **`runtime.requiredEnvironment`** (in `capability.json`) to document environment variables or platform config keys required by implementations (for example `CAP_SQLITEDB_PATH` for SQLite-backed `dbms.*` modules).
 
 ---
 
@@ -462,6 +473,7 @@ A capability description must include:
 
 * name
 * version
+* localized **title** and **summary** (locale-keyed objects, e.g. `en`, `zh_CN`)
 * type
 * signature model
 * request schema

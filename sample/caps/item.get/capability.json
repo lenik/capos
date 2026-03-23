@@ -3,7 +3,14 @@
     "name": "item.get",
     "version": "1.0.0",
     "category": "item",
-    "summary": "Retrieve a single item by identifier.",
+    "title": {
+      "en": "Get Item",
+      "zh_CN": "获取物料"
+    },
+    "summary": {
+      "en": "Retrieve a single item by identifier.",
+      "zh_CN": "按标识获取单个物料。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

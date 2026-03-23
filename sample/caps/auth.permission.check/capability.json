@@ -3,7 +3,14 @@
     "name": "auth.permission.check",
     "version": "1.0.0",
     "category": "auth",
-    "summary": "Evaluate whether the active subject is allowed a permission on an optional resource.",
+    "title": {
+      "en": "Check Permission",
+      "zh_CN": "校验权限"
+    },
+    "summary": {
+      "en": "Evaluate whether the active subject is allowed a permission on an optional resource.",
+      "zh_CN": "判断当前主体是否对可选资源拥有指定权限。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

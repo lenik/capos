@@ -3,7 +3,14 @@
     "name": "salesOrder.get",
     "version": "1.0.0",
     "category": "salesOrder",
-    "summary": "Retrieve sales order header, lines, and status by id.",
+    "title": {
+      "en": "Get Sales Order",
+      "zh_CN": "获取销售订单"
+    },
+    "summary": {
+      "en": "Retrieve sales order header, lines, and status by id.",
+      "zh_CN": "按 ID 获取销售订单表头、行和状态。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

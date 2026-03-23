@@ -3,7 +3,14 @@
     "name": "inventory.reserve",
     "version": "1.0.0",
     "category": "inventory",
-    "summary": "Reserve quantity for an item at a warehouse (e.g. for a sales line).",
+    "title": {
+      "en": "Reserve Inventory",
+      "zh_CN": "预留库存"
+    },
+    "summary": {
+      "en": "Reserve quantity for an item at a warehouse (e.g. for a sales line).",
+      "zh_CN": "在某仓库为物料预留数量（如销售行）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

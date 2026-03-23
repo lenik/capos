@@ -3,7 +3,14 @@
     "name": "gl.account.list",
     "version": "1.0.0",
     "category": "gl",
-    "summary": "List GL accounts matching optional code prefix with paging.",
+    "title": {
+      "en": "List GL Accounts",
+      "zh_CN": "列总账科目"
+    },
+    "summary": {
+      "en": "List GL accounts matching optional code prefix with paging.",
+      "zh_CN": "按可选科目前缀过滤列总账科目，支持分页。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

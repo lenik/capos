@@ -3,7 +3,14 @@
     "name": "inventory.get",
     "version": "1.0.0",
     "category": "inventory",
-    "summary": "Read on-hand or available quantity for an item at a warehouse.",
+    "title": {
+      "en": "Get Inventory",
+      "zh_CN": "获取库存"
+    },
+    "summary": {
+      "en": "Read on-hand or available quantity for an item at a warehouse.",
+      "zh_CN": "读取某仓库中物料的现有量或可用量。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

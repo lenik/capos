@@ -1,6 +1,6 @@
 """Memory Capability OS — in-memory capability registry, routing, and lifecycle (see spec/memcos.md)."""
 
-from util.memcos.runtime import (
+from memcos.runtime import (
     PLATFORM_LIFECYCLE_EVENTS,
     EventBus,
     MemCOS,

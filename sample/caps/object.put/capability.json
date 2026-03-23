@@ -3,7 +3,14 @@
     "name": "object.put",
     "version": "1.0.0",
     "category": "object",
-    "summary": "Register or complete put of an object into a bucket/key namespace.",
+    "title": {
+      "en": "Put Object",
+      "zh_CN": "上传对象"
+    },
+    "summary": {
+      "en": "Register or complete put of an object into a bucket/key namespace.",
+      "zh_CN": "注册或完成将对象写入桶/键命名空间。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

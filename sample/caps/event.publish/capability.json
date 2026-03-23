@@ -3,7 +3,14 @@
     "name": "event.publish",
     "version": "1.0.0",
     "category": "platform",
-    "summary": "Publish a domain event to the platform event bus for subscribers.",
+    "title": {
+      "en": "Publish Event",
+      "zh_CN": "发布事件"
+    },
+    "summary": {
+      "en": "Publish a domain event to the platform event bus for subscribers.",
+      "zh_CN": "向平台事件总线发布领域事件供订阅方消费。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -3,7 +3,14 @@
     "name": "file.preview",
     "version": "1.0.0",
     "category": "file",
-    "summary": "Obtain a preview URL or rendition for an image or document file.",
+    "title": {
+      "en": "Preview File",
+      "zh_CN": "预览文件"
+    },
+    "summary": {
+      "en": "Obtain a preview URL or rendition for an image or document file.",
+      "zh_CN": "获取图片或文档的预览 URL 或渲染版本。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

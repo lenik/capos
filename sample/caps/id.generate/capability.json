@@ -3,7 +3,14 @@
     "name": "id.generate",
     "version": "1.0.0",
     "category": "platform",
-    "summary": "Allocate one or more unique identifiers using a server-side scheme.",
+    "title": {
+      "en": "Generate Id",
+      "zh_CN": "生成标识"
+    },
+    "summary": {
+      "en": "Allocate one or more unique identifiers using a server-side scheme.",
+      "zh_CN": "按服务端方案分配一个或多个唯一标识。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

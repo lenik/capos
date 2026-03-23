@@ -3,7 +3,14 @@
     "name": "receipt.get",
     "version": "1.0.0",
     "category": "receipt",
-    "summary": "Retrieve a goods receipt by id.",
+    "title": {
+      "en": "Get Receipt",
+      "zh_CN": "获取收货单"
+    },
+    "summary": {
+      "en": "Retrieve a goods receipt by id.",
+      "zh_CN": "按 ID 获取收货单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

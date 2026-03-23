@@ -3,8 +3,15 @@
     "name": "chat.ui",
     "version": "1.0.0",
     "category": "chat",
-    "summary": "Headless chat window: MVVM command surface for opening a thread with a contact (e.g. supplier primary contact) and sending messages. GUI binds the same commands as tests (no real click events required).",
-    "lifecycle": "draft"
+    "summary": {
+      "en": "Headless chat window: MVVM command surface for opening a thread with a contact (e.g. supplier primary contact) and sending messages. GUI binds the same commands as tests (no real click events required).",
+      "zh_CN": "无头聊天窗口：MVVM 命令面，用于与联系人（如供应商主联系人）打开会话并发送消息；界面与测试绑定同一套命令，无需真实点击事件。"
+    },
+    "lifecycle": "draft",
+    "title": {
+      "en": "Chat Window",
+      "zh_CN": "聊天窗口"
+    }
   },
   "type": "ui",
   "signature": {
@@ -32,16 +39,27 @@
       "title": "Open chat with supplier contact",
       "category": "functional",
       "description": "In supply chain management, a user opens a chat window with the supplier's primary contact to coordinate delivery or quality issues.",
-      "actors": ["procurement_user"],
-      "relatedCapabilities": ["contact.get", "supplier.get", "dbms.query", "dbms.update"],
-      "preconditions": ["Supplier record references primaryContactId resolved via contact.get."]
+      "actors": [
+        "procurement_user"
+      ],
+      "relatedCapabilities": [
+        "contact.get",
+        "supplier.get",
+        "dbms.query",
+        "dbms.update"
+      ],
+      "preconditions": [
+        "Supplier record references primaryContactId resolved via contact.get."
+      ]
     },
     {
       "id": "headless-command-tests",
       "title": "Automated tests call command handlers directly",
       "category": "operational",
       "description": "View code maps foo.onclick to foo_command(); conformance tests invoke the same command payload as the view model without emitting GUI events.",
-      "relatedCapabilities": ["chat.ui"]
+      "relatedCapabilities": [
+        "chat.ui"
+      ]
     }
   ]
 }

@@ -3,7 +3,14 @@
     "name": "salesOrder.create",
     "version": "1.0.0",
     "category": "salesOrder",
-    "summary": "Create a sales order in draft or submitted state from header and lines.",
+    "title": {
+      "en": "Create Sales Order",
+      "zh_CN": "创建销售订单"
+    },
+    "summary": {
+      "en": "Create a sales order in draft or submitted state from header and lines.",
+      "zh_CN": "根据抬头与行创建草稿或已提交状态的销售订单。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

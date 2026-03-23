@@ -3,7 +3,14 @@
     "name": "task.create",
     "version": "1.0.0",
     "category": "task",
-    "summary": "Create a workflow or work item task assigned to users or roles.",
+    "title": {
+      "en": "Create Task",
+      "zh_CN": "创建任务"
+    },
+    "summary": {
+      "en": "Create a workflow or work item task assigned to users or roles.",
+      "zh_CN": "创建分配给用户或角色的工作流/工作项任务。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

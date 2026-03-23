@@ -3,7 +3,14 @@
     "name": "supplier.get",
     "version": "1.0.0",
     "category": "supplier",
-    "summary": "Retrieve a single supplier by identifier. Includes primaryContactId linking to contact.* master data.",
+    "title": {
+      "en": "Get Supplier",
+      "zh_CN": "获取供应商"
+    },
+    "summary": {
+      "en": "Retrieve a single supplier by identifier. Includes primaryContactId linking to contact.* master data.",
+      "zh_CN": "按标识获取单个供应商；含 primaryContactId 指向 contact.* 主数据。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

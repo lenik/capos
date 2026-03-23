@@ -3,7 +3,14 @@
     "name": "data.__DIALECT__.query",
     "version": "1.0.0",
     "category": "data",
-    "summary": "Execute a constrained __DIALECT__ query and return a tabular result.",
+    "title": {
+      "en": "__DIALECT__ query",
+      "zh_CN": "__DIALECT__ 查询"
+    },
+    "summary": {
+      "en": "Execute a constrained __DIALECT__ query and return a tabular result.",
+      "zh_CN": "执行受约束的 __DIALECT__ 查询并返回表格式结果。"
+    },
     "lifecycle": "draft"
   },
   "type": "data",

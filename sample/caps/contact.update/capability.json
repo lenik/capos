@@ -3,7 +3,14 @@
     "name": "contact.update",
     "version": "1.0.0",
     "category": "contact",
-    "summary": "Patch mutable fields on a contact; optional optimistic expectedVersion.",
+    "title": {
+      "en": "Update Contact",
+      "zh_CN": "更新联系人"
+    },
+    "summary": {
+      "en": "Patch mutable fields on a contact; optional optimistic expectedVersion.",
+      "zh_CN": "部分更新联系人可变字段；可选乐观锁 expectedVersion。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

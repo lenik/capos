@@ -7,7 +7,7 @@
 - expose an **event bus** for **platform → module** lifecycle notifications and optional cross-module events;
 - **assemble** modules in dependency order (basic form).
 
-Implementations live under `util/memcos/` (Python). Other language ports should preserve the **behaviour** described here.
+Implementations live under `memcos/` at the project root (Python). Other language ports should preserve the **behaviour** described here.
 
 ---
 
@@ -86,6 +86,19 @@ Events `module.preupgrade` / `module.upgraded` should include `previousVersion` 
 
 - `invoke(capability_name, request)` uses the **single** registered handler for that name (last install wins if overlapping — **undefined** in production; memcos may warn).
 - A module that **requires** `other.cap` must obtain it only via **router.invoke** (dependency injection style), not static imports of another implementation package.
+
+---
+
+## 5.1 Module hosting (reference; not fully implemented in memcos)
+
+In a full COS, each module implementation may be a **standalone process** (Python, JVM JAR, native `.so`, etc.). The platform may:
+
+- spawn **one OS process per module** (maximum isolation);
+- use a **thread pool** or **in-process** calls for Python modules (lower overhead);
+- for **Java**, load JARs via a **management API** (out of scope for memcos);
+- route `invoke` across processes via a **gateway** (subprocess IPC, HTTP, etc.).
+
+**memcos** currently runs Python handlers **in-process** only. The sample **chatapp** module adds an optional **HTTP** front (`chatapp/http_server.py`) so **chatweb** (Vue) can call `POST /api/chat/ui` after the same MemCOS stack is built in tests; subprocess-per-module and Java hosting are **not** implemented here.
 
 ---
 

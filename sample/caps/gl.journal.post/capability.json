@@ -3,7 +3,14 @@
     "name": "gl.journal.post",
     "version": "1.0.0",
     "category": "gl",
-    "summary": "Post a balanced journal entry to the general ledger.",
+    "title": {
+      "en": "Post GL Journal",
+      "zh_CN": "过账总账凭证"
+    },
+    "summary": {
+      "en": "Post a balanced journal entry to the general ledger.",
+      "zh_CN": "将平衡分录过账到总账。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

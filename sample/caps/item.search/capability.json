@@ -3,7 +3,14 @@
     "name": "item.search",
     "version": "1.0.0",
     "category": "item",
-    "summary": "Search item/SKU master data with optional filters and paging.",
+    "title": {
+      "en": "Search Items",
+      "zh_CN": "搜索物料"
+    },
+    "summary": {
+      "en": "Search item/SKU master data with optional filters and paging.",
+      "zh_CN": "搜索物料/SKU 主数据，可选过滤与分页。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

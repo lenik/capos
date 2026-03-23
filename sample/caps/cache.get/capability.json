@@ -3,7 +3,14 @@
     "name": "cache.get",
     "version": "1.0.0",
     "category": "cache",
-    "summary": "Read a value from a namespaced cache key.",
+    "title": {
+      "en": "Get Cache",
+      "zh_CN": "读取缓存"
+    },
+    "summary": {
+      "en": "Read a value from a namespaced cache key.",
+      "zh_CN": "按命名空间缓存键读取值。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

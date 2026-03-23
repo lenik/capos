@@ -3,7 +3,14 @@
     "name": "ui.__KIND__.__DOMAIN__.__WIDGET__",
     "version": "1.0.0",
     "category": "ui",
-    "summary": "UI contract for __WIDGET__ (__KIND__).",
+    "title": {
+      "en": "__WIDGET__ (__KIND__)",
+      "zh_CN": "__WIDGET__（__KIND__）"
+    },
+    "summary": {
+      "en": "UI contract for __WIDGET__ (__KIND__).",
+      "zh_CN": "__WIDGET__（__KIND__）的 UI 契约。"
+    },
     "lifecycle": "draft"
   },
   "type": "ui",

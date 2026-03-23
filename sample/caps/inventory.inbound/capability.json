@@ -3,7 +3,14 @@
     "name": "inventory.inbound",
     "version": "1.0.0",
     "category": "inventory",
-    "summary": "Post inbound stock (receipt) for an item at a warehouse.",
+    "title": {
+      "en": "Inventory Inbound",
+      "zh_CN": "库存入库"
+    },
+    "summary": {
+      "en": "Post inbound stock (receipt) for an item at a warehouse.",
+      "zh_CN": "为某仓库物料过账入库（收货）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

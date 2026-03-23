@@ -3,7 +3,14 @@
     "name": "integration.webhook.receive",
     "version": "1.0.0",
     "category": "integration",
-    "summary": "Accept an inbound webhook: verify provider signature, normalize payload, dedupe by event id.",
+    "title": {
+      "en": "Receive Webhook",
+      "zh_CN": "接收 Webhook"
+    },
+    "summary": {
+      "en": "Accept an inbound webhook: verify provider signature, normalize payload, dedupe by event id.",
+      "zh_CN": "接收入站 Webhook：校验提供方签名、规范化载荷、按事件 ID 去重。"
+    },
     "lifecycle": "draft"
   },
   "type": "integration",

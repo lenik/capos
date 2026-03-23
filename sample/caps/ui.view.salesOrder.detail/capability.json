@@ -3,7 +3,14 @@
     "name": "ui.view.salesOrder.detail",
     "version": "1.0.0",
     "category": "salesOrder",
-    "summary": "Read-only sales order detail view: header, lines, and bound backend capabilities.",
+    "title": {
+      "en": "Sales Order Detail View",
+      "zh_CN": "销售订单明细视图"
+    },
+    "summary": {
+      "en": "Read-only sales order detail view: header, lines, and bound backend capabilities.",
+      "zh_CN": "只读销售订单明细视图：表头、行及绑定的后端能力。"
+    },
     "lifecycle": "draft"
   },
   "type": "ui",

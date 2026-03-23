@@ -3,7 +3,14 @@
     "name": "identity.current.get",
     "version": "1.0.0",
     "category": "identity",
-    "summary": "Return the authenticated principal for the active session or token.",
+    "title": {
+      "en": "Get Current Identity",
+      "zh_CN": "获取当前身份"
+    },
+    "summary": {
+      "en": "Return the authenticated principal for the active session or token.",
+      "zh_CN": "返回当前会话或令牌对应的已认证主体。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -4,9 +4,41 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+_I18N_CACHE: dict | None = None
+
+
+def _load_i18n_bundle() -> dict:
+    p = ROOT / "scripts/data/capability_i18n.json"
+    if not p.is_file():
+        return {}
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _i18n_bundle() -> dict:
+    global _I18N_CACHE
+    if _I18N_CACHE is None:
+        _I18N_CACHE = _load_i18n_bundle()
+    return _I18N_CACHE
+
+
+def _default_title_en(name: str) -> str:
+    """English title when capability is not in capability_i18n.json (regeneration fallback)."""
+    s = name.replace(".", " ")
+    s = re.sub(r"([a-z])([A-Z])", r"\1 \2", s)
+    return s.title()
+
+
+def capability_i18n(name: str, summary_en: str) -> tuple[dict, dict]:
+    """Return (title, summary) locale maps; prefer scripts/data/capability_i18n.json."""
+    b = _i18n_bundle().get(name)
+    if b:
+        return dict(b["title"]), dict(b["summary"])
+    t = _default_title_en(name)
+    return ({"en": t, "zh_CN": t}, {"en": summary_en, "zh_CN": summary_en})
 CAPS = ROOT / "sample" / "caps"
 ERR_REF = {"$ref": "../../_shared/schemas/erp-error.json"}
 PAGE_REQ = {"$ref": "../../_shared/schemas/page-request.json"}
@@ -15,7 +47,7 @@ PAGE_RES = {"$ref": "../../_shared/schemas/page-response.json"}
 
 def write_json(path: Path, data: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def write_yaml(path: Path, tests: list[dict]) -> None:
@@ -84,6 +116,7 @@ def emit_module(
         fname = default_names[i] if i < len(default_names) else f"example-{i + 1}.json"
         write_json(ex_dir / fname, ex)
         example_paths.append(f"examples/{fname}")
+    title_i18n, summary_i18n = capability_i18n(name, summary)
     write_json(
         base / "capability.json",
         {
@@ -91,7 +124,8 @@ def emit_module(
                 "name": name,
                 "version": "1.0.0",
                 "category": category,
-                "summary": summary,
+                "title": title_i18n,
+                "summary": summary_i18n,
                 "lifecycle": lifecycle,
             },
             "type": capability_type,
@@ -144,12 +178,14 @@ def emit_capability(
             case_paths.append(rel)
         tests_block["caseFiles"] = case_paths
         tests_block["casesDirectory"] = "tests/cases"
+    title_i18n, summary_i18n = capability_i18n(name, summary)
     cap_payload: dict = {
         "capability": {
             "name": name,
             "version": "1.0.0",
             "category": category,
-            "summary": summary,
+            "title": title_i18n,
+            "summary": summary_i18n,
             "lifecycle": lifecycle,
         },
         "type": capability_type,

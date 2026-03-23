@@ -3,8 +3,15 @@
     "name": "dbms.query",
     "version": "1.0.0",
     "category": "dbms",
-    "summary": "Execute a read-only SQL query and return a tabular result set.",
-    "lifecycle": "draft"
+    "summary": {
+      "en": "Execute a read-only SQL query and return a tabular result set.",
+      "zh_CN": "执行只读 SQL 查询并返回表格式结果。"
+    },
+    "lifecycle": "draft",
+    "title": {
+      "en": "DBMS Query",
+      "zh_CN": "数据库查询"
+    }
   },
   "type": "data",
   "runtime": {

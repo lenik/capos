@@ -3,7 +3,14 @@
     "name": "workOrder.get",
     "version": "1.0.0",
     "category": "workOrder",
-    "summary": "Retrieve work order status, quantity, and plant by id.",
+    "title": {
+      "en": "Get Work Order",
+      "zh_CN": "获取工单"
+    },
+    "summary": {
+      "en": "Retrieve work order status, quantity, and plant by id.",
+      "zh_CN": "按 ID 获取工单状态、数量与工厂。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

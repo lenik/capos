@@ -3,7 +3,14 @@
     "name": "ap.bill.create",
     "version": "1.0.0",
     "category": "ap",
-    "summary": "Create a AP bill header with lines for posting.",
+    "title": {
+      "en": "Create AP Bill",
+      "zh_CN": "创建应付账单"
+    },
+    "summary": {
+      "en": "Create a AP bill header with lines for posting.",
+      "zh_CN": "创建含明细行的应付（AP）账单抬头，用于过账。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

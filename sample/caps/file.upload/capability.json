@@ -3,7 +3,14 @@
     "name": "file.upload",
     "version": "1.0.0",
     "category": "file",
-    "summary": "Register an upload session or accept streamed file metadata and return a stored file id.",
+    "title": {
+      "en": "Upload File",
+      "zh_CN": "上传文件"
+    },
+    "summary": {
+      "en": "Register an upload session or accept streamed file metadata and return a stored file id.",
+      "zh_CN": "注册上传会话或接收流式文件元数据并返回存储文件 ID。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

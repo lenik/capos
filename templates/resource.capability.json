@@ -3,7 +3,14 @@
     "name": "__RESOURCE__.__ACTION__",
     "version": "1.0.0",
     "category": "__RESOURCE__",
-    "summary": "__ONE_LINE_SUMMARY__",
+    "title": {
+      "en": "__TITLE_EN__",
+      "zh_CN": "__TITLE_ZH__"
+    },
+    "summary": {
+      "en": "__ONE_LINE_SUMMARY__",
+      "zh_CN": "__ONE_LINE_SUMMARY_ZH__"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

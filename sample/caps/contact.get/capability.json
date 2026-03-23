@@ -3,7 +3,14 @@
     "name": "contact.get",
     "version": "1.0.0",
     "category": "contact",
-    "summary": "Retrieve a contact by id; used when resolving customer.primaryContactId / supplier.primaryContactId.",
+    "title": {
+      "en": "Get Contact",
+      "zh_CN": "获取联系人"
+    },
+    "summary": {
+      "en": "Retrieve a contact by id; used when resolving customer.primaryContactId / supplier.primaryContactId.",
+      "zh_CN": "按 ID 获取联系人；用于解析 customer.primaryContactId / supplier.primaryContactId。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

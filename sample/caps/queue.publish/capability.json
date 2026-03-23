@@ -3,7 +3,14 @@
     "name": "queue.publish",
     "version": "1.0.0",
     "category": "queue",
-    "summary": "Publish a message to a topic or queue endpoint.",
+    "title": {
+      "en": "Publish Queue",
+      "zh_CN": "发布队列"
+    },
+    "summary": {
+      "en": "Publish a message to a topic or queue endpoint.",
+      "zh_CN": "向主题或队列端点发布消息。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

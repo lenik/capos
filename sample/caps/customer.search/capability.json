@@ -3,7 +3,14 @@
     "name": "customer.search",
     "version": "1.0.0",
     "category": "customer",
-    "summary": "Search customer records with optional text query and paging. Items may include primaryContactId (contact.*).",
+    "title": {
+      "en": "Search Customers",
+      "zh_CN": "搜索客户"
+    },
+    "summary": {
+      "en": "Search customer records with optional text query and paging. Items may include primaryContactId (contact.*).",
+      "zh_CN": "搜索客户记录，可选文本与分页；结果可含 primaryContactId（contact.*）。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

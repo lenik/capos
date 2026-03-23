@@ -3,7 +3,14 @@
     "name": "invoice.create",
     "version": "1.0.0",
     "category": "invoice",
-    "summary": "Create an AR invoice from billing lines and customer reference.",
+    "title": {
+      "en": "Create Invoice",
+      "zh_CN": "创建发票"
+    },
+    "summary": {
+      "en": "Create an AR invoice from billing lines and customer reference.",
+      "zh_CN": "根据计费行与客户引用创建应收发票。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

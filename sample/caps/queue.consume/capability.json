@@ -3,7 +3,14 @@
     "name": "queue.consume",
     "version": "1.0.0",
     "category": "queue",
-    "summary": "Pull up to N messages from a subscription with optional visibility timeout.",
+    "title": {
+      "en": "Consume Queue",
+      "zh_CN": "消费队列"
+    },
+    "summary": {
+      "en": "Pull up to N messages from a subscription with optional visibility timeout.",
+      "zh_CN": "从订阅拉取最多 N 条消息，可选可见性超时。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

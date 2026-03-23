@@ -3,7 +3,14 @@
     "name": "approval.action.approve",
     "version": "1.0.0",
     "category": "approval",
-    "summary": "Record an approval decision on a pending approval request.",
+    "title": {
+      "en": "Approve Request",
+      "zh_CN": "审批通过"
+    },
+    "summary": {
+      "en": "Record an approval decision on a pending approval request.",
+      "zh_CN": "对待处理的审批请求记录同意决策。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

@@ -3,7 +3,14 @@
     "name": "contact.search",
     "version": "1.0.0",
     "category": "contact",
-    "summary": "Search contacts by text, optional tag, with paging.",
+    "title": {
+      "en": "Search Contacts",
+      "zh_CN": "搜索联系人"
+    },
+    "summary": {
+      "en": "Search contacts by text, optional tag, with paging.",
+      "zh_CN": "按文本、可选标签搜索联系人，支持分页。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",

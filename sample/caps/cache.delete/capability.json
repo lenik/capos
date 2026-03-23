@@ -3,7 +3,14 @@
     "name": "cache.delete",
     "version": "1.0.0",
     "category": "cache",
-    "summary": "Remove a key from a cache namespace.",
+    "title": {
+      "en": "Delete Cache",
+      "zh_CN": "删除缓存"
+    },
+    "summary": {
+      "en": "Remove a key from a cache namespace.",
+      "zh_CN": "从缓存命名空间中移除键。"
+    },
     "lifecycle": "draft"
   },
   "type": "resource",

@@ -3,7 +3,14 @@
     "name": "customer.get",
     "version": "1.0.0",
     "category": "customer",
-    "summary": "Retrieve a single customer by identifier. Includes primaryContactId linking to contact.* master data.",
+    "title": {
+      "en": "Get Customer",
+      "zh_CN": "获取客户"
+    },
+    "summary": {
+      "en": "Retrieve a single customer by identifier. Includes primaryContactId linking to contact.* master data.",
+      "zh_CN": "按标识获取单个客户；含 primaryContactId 指向 contact.* 主数据。"
+    },
     "lifecycle": "draft"
   },
   "type": "service",
