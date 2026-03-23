@@ -48,6 +48,11 @@
       "version": "1.0.0"
     },
     {
+      "name": "chat.ui",
+      "path": "chat.ui/capability.json",
+      "version": "1.0.0"
+    },
+    {
       "name": "contact.create",
       "path": "contact.create/capability.json",
       "version": "1.0.0"
@@ -95,6 +100,16 @@
     {
       "name": "database.connection.ping",
       "path": "database.connection.ping/capability.json",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dbms.query",
+      "path": "dbms.query/capability.json",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dbms.update",
+      "path": "dbms.update/capability.json",
       "version": "1.0.0"
     },
     {

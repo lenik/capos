@@ -156,11 +156,11 @@ Example structure:
 
 When capabilities are collected under an ERP module registry, use:
 
-- `modules/<capability.name>/capability.json` — definition file; `signature.*Schema` paths are relative to this directory.
-- `modules/<capability.name>/schemas/` — request, response, and error JSON Schemas for that capability.
-- `modules/<capability.name>/examples/` — machine-readable examples (success and failure where applicable).
-- `modules/<capability.name>/tests/contract-tests.yaml` — contract tests.
-- `modules/_shared/schemas/` — cross-capability JSON Schemas, referenced with relative `$ref` from files under `modules/<capability.name>/schemas/`.
+- `sample/caps/<capability.name>/capability.json` — definition file; `signature.*Schema` paths are relative to this directory.
+- `sample/caps/<capability.name>/schemas/` — request, response, and error JSON Schemas for that capability.
+- `sample/caps/<capability.name>/examples/` — machine-readable examples (success and failure where applicable).
+- `sample/caps/<capability.name>/tests/contract-tests.yaml` — contract tests (and optional `tests/cases/*.yaml` — see **Scenarios** below).
+- `sample/caps/_shared/schemas/` — cross-capability JSON Schemas, referenced with relative `$ref` from files under `sample/caps/<capability.name>/schemas/`.
 
 ---
 
@@ -393,9 +393,15 @@ Example:
 }
 ```
 
-For packaged capabilities under `modules/<capability.name>/`, the `examples` array in `capability.json` typically lists JSON files such as `examples/success.json` (happy path) and `examples/failure.json` (validation or domain error payload), each containing a `request` and either a `response` or an `error` object.
+For packaged capabilities under `sample/caps/<capability.name>/`, the `examples` array in `capability.json` typically lists JSON files such as `examples/success.json` (happy path) and `examples/failure.json` (validation or domain error payload), each containing a `request` and either a `response` or an `error` object.
 
 For **event-handler** capabilities, use an **`event`** object instead of `request` in those JSON files, and optionally a **`response`** ack object when the handler contract returns a processing acknowledgement (see `on.salesOrder.confirmed` in the module registry). Contract tests may still use a YAML `request:` block to supply the same payload shape for runners that expect a single input key.
+
+---
+
+# 12.1 Scenarios
+
+Each capability may include a **`scenarios`** array in `capability.json`: real-world **instances** describing how the capability is used. Categories include **functional** flows (who does what, which other capabilities are involved) and **non_functional** expectations (security, performance, compliance, resilience). Use **`nfrTargets`** for measurable hints (e.g. max latency). This complements examples and tests: scenarios explain *why* and *under which constraints* the contract matters.
 
 ---
 
@@ -418,8 +424,10 @@ tests:
     request:
       contactId: "invalid"
     expectError:
-      code: CONTACT_NOT_FOUND
+      code: NOT_FOUND
 ```
+
+The **`tests`** object may also list **`caseFiles`**: paths (relative to the capability directory) to YAML files whose top-level key is **`cases:`** with the same per-entry shape as above. Use this for large conformance suites. Optional **`casesDirectory`** documents where those files live (e.g. `tests/cases`). Tools such as **captest** (under `utils/`) can execute `contractTests` and all **`caseFiles`** against an implementation.
 
 These tests ensure that implementations conform to the capability contract.
 
@@ -442,7 +450,13 @@ Draft → Stable → Deprecated → Retired
 
 ---
 
-# 15. Summary
+# 15. Module implementations and platform references
+
+Implementation modules (any language) are described by **ModuleSpec** (`spec/modulespec.md`, `schemas/modulespec.schema.json`); examples live under `sample/modules/`. The **memcos** reference runtime (`spec/memcos.md`, `util/memcos/`) provides in-memory capability routing, platform lifecycle events (`module.installed`, …), and an event bus for tests and demos.
+
+---
+
+# 16. Summary
 
 A capability description must include:
 

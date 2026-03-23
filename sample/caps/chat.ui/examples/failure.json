@@ -1,0 +1,12 @@
+{
+  "request": {
+    "command": "chat.openWindow",
+    "params": {
+      "primaryContactId": "missing-id"
+    }
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Contact not found"
+  }
+}

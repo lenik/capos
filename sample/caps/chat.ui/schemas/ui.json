@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["widgetKind", "commandModel", "bindings"],
+  "properties": {
+    "widgetKind": {
+      "const": "chat.window"
+    },
+    "commandModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["commands", "headlessTestingNote"],
+      "properties": {
+        "commands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "paramsSchema": { "type": "object", "additionalProperties": true }
+            }
+          }
+        },
+        "headlessTestingNote": {
+          "type": "string",
+          "description": "Tests and GUI both call the same command handlers; tests must not require DOM events."
+        }
+      }
+    },
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resolveContactCapability", "dbmsQueryCapability", "dbmsUpdateCapability"],
+      "properties": {
+        "resolveContactCapability": {
+          "type": "string",
+          "const": "contact.get"
+        },
+        "dbmsQueryCapability": {
+          "type": "string",
+          "const": "dbms.query"
+        },
+        "dbmsUpdateCapability": {
+          "type": "string",
+          "const": "dbms.update"
+        }
+      }
+    }
+  }
+}

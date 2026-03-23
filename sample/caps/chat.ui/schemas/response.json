@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["viewModel", "lastResult"],
+  "properties": {
+    "viewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["windowId", "sessionId", "title", "messages"],
+      "properties": {
+        "windowId": { "type": "string" },
+        "sessionId": { "type": "string" },
+        "title": { "type": "string" },
+        "context": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Business context (e.g. supplier + entity id)."
+        },
+        "peerContact": {
+          "type": ["object", "null"],
+          "additionalProperties": true
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["messageId", "body", "direction", "createdAt"],
+            "properties": {
+              "messageId": { "type": "string" },
+              "body": { "type": "string" },
+              "direction": {
+                "type": "string",
+                "enum": ["outbound", "inbound"]
+              },
+              "createdAt": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "lastResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ok"],
+      "properties": {
+        "ok": { "type": "boolean" },
+        "detail": { "type": "string" }
+      }
+    }
+  }
+}

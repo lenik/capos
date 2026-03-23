@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate ERP CapSpec module trees under modules/. Run from repo root: python3 scripts/generate_erp_modules.py"""
+"""Generate ERP CapSpec capability trees under sample/caps/. Run from repo root: python3 scripts/generate_erp_modules.py"""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULES = ROOT / "modules"
+CAPS = ROOT / "sample" / "caps"
 ERR_REF = {"$ref": "../../_shared/schemas/erp-error.json"}
 PAGE_REQ = {"$ref": "../../_shared/schemas/page-request.json"}
 PAGE_RES = {"$ref": "../../_shared/schemas/page-response.json"}
@@ -37,6 +37,27 @@ def write_yaml(path: Path, tests: list[dict]) -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def write_cases_yaml(path: Path, cases: list[dict]) -> None:
+    """Write tests/cases/*.yaml with top-level `cases:` (for captest extended suites)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lines = ["cases:"]
+    for c in cases:
+        lines.append(f"  - name: {c['name']}")
+        if "request" in c:
+            lines.append("    request:")
+            for k, v in c["request"].items():
+                lines.append(f"      {k}: {json.dumps(v)}")
+        if "expect" in c:
+            lines.append("    expect:")
+            for k, v in c["expect"].items():
+                lines.append(f"      {k}: {json.dumps(v)}")
+        if "expectError" in c:
+            lines.append("    expectError:")
+            for k, v in c["expectError"].items():
+                lines.append(f"      {k}: {json.dumps(v)}")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def emit_module(
     name: str,
     *,
@@ -53,7 +74,7 @@ def emit_module(
     lifecycle: str,
 ) -> None:
     """Emit a capability tree with arbitrary schema files (e.g. data / ui signatures)."""
-    base = MODULES / name
+    base = CAPS / name
     for rel in sorted(schema_files.keys()):
         write_json(base / rel, schema_files[rel])
     ex_dir = base / "examples"
@@ -101,8 +122,10 @@ def emit_capability(
     examples: list[dict],
     tests: list[dict],
     capability_type: str = "service",
+    scenarios: list[dict] | None = None,
+    case_suites: list[tuple[str, list[dict]]] | None = None,
 ) -> None:
-    base = MODULES / name
+    base = CAPS / name
     write_json(base / "schemas" / "request.json", request)
     write_json(base / "schemas" / "response.json", response)
     write_json(base / "schemas" / "error.json", ERR_REF)
@@ -113,37 +136,45 @@ def emit_capability(
         fname = default_names[i] if i < len(default_names) else f"example-{i + 1}.json"
         write_json(ex_dir / fname, ex)
         example_paths.append(f"examples/{fname}")
-    write_json(
-        base / "capability.json",
-        {
-            "capability": {
-                "name": name,
-                "version": "1.0.0",
-                "category": category,
-                "summary": summary,
-                "lifecycle": lifecycle,
-            },
-            "type": capability_type,
-            "signature": {
-                "model": "request-response",
-                "requestSchema": "schemas/request.json",
-                "responseSchema": "schemas/response.json",
-                "errorSchema": "schemas/error.json",
-            },
-            "semantics": {
-                "idempotent": idempotent,
-                "sideEffect": side_effect,
-                "transactional": transactional,
-            },
-            "examples": example_paths,
-            "tests": {"contractTests": "tests/contract-tests.yaml"},
+    tests_block: dict = {"contractTests": "tests/contract-tests.yaml"}
+    case_paths: list[str] = []
+    if case_suites:
+        for rel, cases in case_suites:
+            write_cases_yaml(base / rel, cases)
+            case_paths.append(rel)
+        tests_block["caseFiles"] = case_paths
+        tests_block["casesDirectory"] = "tests/cases"
+    cap_payload: dict = {
+        "capability": {
+            "name": name,
+            "version": "1.0.0",
+            "category": category,
+            "summary": summary,
+            "lifecycle": lifecycle,
         },
-    )
+        "type": capability_type,
+        "signature": {
+            "model": "request-response",
+            "requestSchema": "schemas/request.json",
+            "responseSchema": "schemas/response.json",
+            "errorSchema": "schemas/error.json",
+        },
+        "semantics": {
+            "idempotent": idempotent,
+            "sideEffect": side_effect,
+            "transactional": transactional,
+        },
+        "examples": example_paths,
+        "tests": tests_block,
+    }
+    if scenarios:
+        cap_payload["scenarios"] = scenarios
+    write_json(base / "capability.json", cap_payload)
     write_yaml(base / "tests" / "contract-tests.yaml", tests)
 
 
 def main() -> None:
-    MODULES.mkdir(parents=True, exist_ok=True)
+    CAPS.mkdir(parents=True, exist_ok=True)
 
     from erp_resources import emit_resource_capabilities
 
@@ -391,10 +422,35 @@ def main() -> None:
         sample_id = {"customer": "cus-001", "supplier": "sup-001", "item": "itm-001"}.get(
             entity, f"{entity[:3]}-001"
         )
+        resp_props = {
+            id_field: {"type": "string"},
+            "code": {"type": "string"},
+            "name": {"type": "string"},
+            "status": {"type": "string", "enum": ["active", "inactive", "blocked"]},
+            "metadata": {"type": "object", "additionalProperties": True},
+        }
+        sample_resp = {
+            id_field: sample_id,
+            "code": "C001",
+            "name": "Acme Corp",
+            "status": "active",
+            "metadata": {},
+        }
+        if entity in ("customer", "supplier"):
+            resp_props["primaryContactId"] = {
+                "type": "string",
+                "description": "Primary contact record (contact.*); customers and suppliers reference contacts.",
+            }
+            sample_resp["primaryContactId"] = "con-001"
         emit_capability(
             name,
             category=category,
-            summary=f"Retrieve a single {entity} by identifier.",
+            summary=f"Retrieve a single {entity} by identifier."
+            + (
+                " Includes primaryContactId linking to contact.* master data."
+                if entity in ("customer", "supplier")
+                else ""
+            ),
             idempotent=True,
             side_effect=False,
             transactional=False,
@@ -411,24 +467,12 @@ def main() -> None:
                 "type": "object",
                 "additionalProperties": False,
                 "required": [id_field, "code", "name", "status"],
-                "properties": {
-                    id_field: {"type": "string"},
-                    "code": {"type": "string"},
-                    "name": {"type": "string"},
-                    "status": {"type": "string", "enum": ["active", "inactive", "blocked"]},
-                    "metadata": {"type": "object", "additionalProperties": True},
-                },
+                "properties": resp_props,
             },
             examples=[
                 {
                     "request": {id_field: sample_id},
-                    "response": {
-                        id_field: sample_id,
-                        "code": "C001",
-                        "name": "Acme Corp",
-                        "status": "active",
-                        "metadata": {},
-                    },
+                    "response": sample_resp,
                 },
                 {
                     "request": {id_field: "missing"},
@@ -453,10 +497,30 @@ def main() -> None:
         sample_id = {"customer": "cus-001", "supplier": "sup-001", "item": "itm-001"}.get(
             entity, f"{entity[:3]}-001"
         )
+        item_props: dict = {
+            id_field: {"type": "string"},
+            "code": {"type": "string"},
+            "name": {"type": "string"},
+            "status": {"type": "string"},
+        }
+        sample_item = {
+            id_field: sample_id,
+            "code": "C001",
+            "name": "Acme",
+            "status": "active",
+        }
+        if entity in ("customer", "supplier"):
+            item_props["primaryContactId"] = {"type": "string"}
+            sample_item["primaryContactId"] = "con-001"
         emit_capability(
             name,
             category=category,
-            summary=f"Search {entity} records with optional text query and paging.",
+            summary=f"Search {entity} records with optional text query and paging."
+            + (
+                " Items may include primaryContactId (contact.*)."
+                if entity in ("customer", "supplier")
+                else ""
+            ),
             idempotent=True,
             side_effect=False,
             transactional=False,
@@ -482,12 +546,7 @@ def main() -> None:
                         "items": {
                             "type": "object",
                             "required": [id_field, "code", "name"],
-                            "properties": {
-                                id_field: {"type": "string"},
-                                "code": {"type": "string"},
-                                "name": {"type": "string"},
-                                "status": {"type": "string"},
-                            },
+                            "properties": item_props,
                             "additionalProperties": False,
                         },
                     },
@@ -499,12 +558,7 @@ def main() -> None:
                     "request": {"query": "acme", "page": {"limit": 10}},
                     "response": {
                         "items": [
-                            {
-                                id_field: sample_id,
-                                "code": "C001",
-                                "name": "Acme",
-                                "status": "active",
-                            }
+                            sample_item,
                         ],
                         "page": {"hasMore": False, "totalCount": 1},
                     },
@@ -2101,13 +2155,17 @@ def main() -> None:
 
     emit_extended_erp(emit_capability, emit_module)
 
+    from contact_capabilities import emit_contact_capabilities
+
+    emit_contact_capabilities(emit_capability)
+
     # Registry index
-    caps = sorted(p.name for p in MODULES.iterdir() if p.is_dir() and not p.name.startswith("_"))
+    caps = sorted(p.name for p in CAPS.iterdir() if p.is_dir() and not p.name.startswith("_"))
     write_json(
-        MODULES / "registry.json",
+        CAPS / "registry.json",
         {
             "version": "1.0.0",
-            "description": "ERP CapSpec registry: core batch, resources, data/ui, events, integration, extended org/quotation/PR/shipment/receipt/GL/contract/workOrder, webhook + ui.view.",
+            "description": "ERP CapSpec sample registry (paths relative to sample/caps/). Includes contact.*, customer/supplier primaryContactId, core batch, resources, data/ui, events, integration, extended domains. See sample/modules/contactbook for contact.* reference implementation.",
             "capabilities": [
                 {
                     "name": c,
@@ -2118,7 +2176,7 @@ def main() -> None:
             ],
         },
     )
-    print(f"Wrote {len(caps)} capabilities under {MODULES}")
+    print(f"Wrote {len(caps)} capabilities under {CAPS}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,32 @@
+{
+  "request": {
+    "uiContext": {},
+    "command": "chat.openWindow",
+    "params": {
+      "primaryContactId": "con-100",
+      "context": {
+        "kind": "supplier",
+        "entityId": "sup-1"
+      }
+    }
+  },
+  "response": {
+    "viewModel": {
+      "windowId": "win-1",
+      "sessionId": "sess-1",
+      "title": "Supplier — Acme Parts",
+      "context": {
+        "kind": "supplier",
+        "entityId": "sup-1"
+      },
+      "peerContact": {
+        "contactId": "con-100",
+        "displayName": "Jordan Smith"
+      },
+      "messages": []
+    },
+    "lastResult": {
+      "ok": true
+    }
+  }
+}

@@ -7,6 +7,29 @@
   "additionalProperties": false,
   "required": ["capability", "type", "signature", "semantics"],
   "properties": {
+    "runtime": {
+      "type": "object",
+      "description": "Optional deployment/runtime expectations for implementations (env vars, secrets).",
+      "additionalProperties": false,
+      "properties": {
+        "requiredEnvironment": {
+          "type": "array",
+          "description": "Environment variables or platform config keys required to run a conforming implementation.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "optional": { "type": "boolean" },
+              "secret": { "type": "boolean" },
+              "example": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
     "capability": {
       "type": "object",
       "additionalProperties": false,
@@ -170,13 +193,74 @@
         ]
       }
     },
+    "scenarios": {
+      "type": "array",
+      "description": "Scenario instances: how the capability is used in practice (functional or non-functional).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "category", "description"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable scenario identifier within the capability."
+          },
+          "title": { "type": "string" },
+          "category": {
+            "type": "string",
+            "description": "functional = business flow; non_functional = NFR (performance, security, audit, etc.).",
+            "enum": [
+              "functional",
+              "non_functional",
+              "operational",
+              "security",
+              "compliance",
+              "resilience"
+            ]
+          },
+          "description": { "type": "string" },
+          "actors": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "preconditions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "postconditions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "relatedCapabilities": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Other capability names involved in this scenario."
+          },
+          "nfrTargets": {
+            "type": "object",
+            "description": "Optional measurable targets for non-functional scenarios (e.g. max latency ms).",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
     "tests": {
       "type": "object",
-      "additionalProperties": false,
+      "description": "Test artifacts: contract suite plus optional extra case files for deep conformance.",
+      "additionalProperties": true,
       "properties": {
         "contractTests": {
           "type": "string",
-          "description": "Path to contract test definition (e.g. YAML)."
+          "description": "Path to primary contract test YAML (tests: list)."
+        },
+        "casesDirectory": {
+          "type": "string",
+          "description": "Optional directory (relative) containing additional case YAML files."
+        },
+        "caseFiles": {
+          "type": "array",
+          "description": "Paths to YAML files with top-level `cases:` list (same shape as contract test entries).",
+          "items": { "type": "string" }
         }
       }
     }

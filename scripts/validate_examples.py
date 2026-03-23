@@ -11,7 +11,7 @@ from pathlib import Path
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULES = ROOT / "modules"
+CAPS_ROOT = ROOT / "sample" / "caps"
 
 
 def main() -> int:
@@ -28,7 +28,7 @@ def main() -> int:
     errors = 0
     checked = 0
     modules = 0
-    for d in sorted(MODULES.iterdir()):
+    for d in sorted(CAPS_ROOT.iterdir()):
         if not d.is_dir() or d.name.startswith("_"):
             continue
         success = d / "examples" / "success.json"

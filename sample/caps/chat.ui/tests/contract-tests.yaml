@@ -1,0 +1,25 @@
+tests:
+  - name: chat-open-supplier-window-headless
+    request:
+      uiContext: {}
+      command: chat.openWindow
+      params:
+        primaryContactId: con-100
+        context:
+          kind: supplier
+          entityId: sup-1
+    expect:
+      status: success
+  - name: chat-send-message-headless
+    request:
+      command: chat.sendMessage
+      params:
+        text: "Shipment ETA?"
+    expect:
+      status: success
+  - name: chat-refresh-thread
+    request:
+      command: chat.refreshThread
+      params: {}
+    expect:
+      status: success

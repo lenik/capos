@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate every modules/*/capability.json against schemas/capspec.schema.json."""
+"""Validate every sample/caps/*/capability.json against schemas/capspec.schema.json."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ def main() -> int:
         import jsonschema
 
     cap_schema = json.loads((ROOT / "schemas" / "capspec.schema.json").read_text(encoding="utf-8"))
-    mods = ROOT / "modules"
+    mods = ROOT / "sample" / "caps"
     errors = 0
     count = 0
     for d in sorted(mods.iterdir()):
