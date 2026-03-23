@@ -1,0 +1,9 @@
+{
+  "request": {
+    "purchaseOrderId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Purchase order not found"
+  }
+}

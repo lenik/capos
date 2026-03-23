@@ -1,0 +1,10 @@
+{
+  "request": {
+    "sql": "DROP TABLE customers",
+    "parameters": {}
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "Statement type not allowed in CSQL catalog"
+  }
+}

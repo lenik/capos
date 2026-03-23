@@ -1,0 +1,10 @@
+{
+  "request": {
+    "warehouseId": "wh-01",
+    "lines": []
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "lines must not be empty"
+  }
+}

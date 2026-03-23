@@ -1,0 +1,11 @@
+tests:
+  - name: customer-get-ok
+    request:
+      customerId: "cus-001"
+    expect:
+      status: "success"
+  - name: customer-get-not-found
+    request:
+      customerId: "missing"
+    expectError:
+      code: "NOT_FOUND"

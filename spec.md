@@ -66,15 +66,15 @@ contact.search
 inventory.reserve
 salesOrder.create
 invoice.issue
+approval.action.approve
 
 ```
 
 Naming rules:
 
-- lower case
-- dot-separated
-- first segment represents the domain
-- second segment represents the action
+- Dot-separated segments; each segment is **lowerCamelCase** (starts with a lowercase letter; inner words use capital letters, e.g. `salesOrder`, `purchaseOrder`).
+- The first segment is the primary domain; further segments refine the resource or namespace before the action.
+- At least two segments are required (`domain.action` minimum). Compound flows may use more segments (e.g. `approval.action.approve`).
 
 ---
 
@@ -151,6 +151,16 @@ Example structure:
   }
 }
 ````
+
+### 5.1 ERP module directory layout
+
+When capabilities are collected under an ERP module registry, use:
+
+- `modules/<capability.name>/capability.json` — definition file; `signature.*Schema` paths are relative to this directory.
+- `modules/<capability.name>/schemas/` — request, response, and error JSON Schemas for that capability.
+- `modules/<capability.name>/examples/` — machine-readable examples (success and failure where applicable).
+- `modules/<capability.name>/tests/contract-tests.yaml` — contract tests.
+- `modules/_shared/schemas/` — cross-capability JSON Schemas, referenced with relative `$ref` from files under `modules/<capability.name>/schemas/`.
 
 ---
 
@@ -249,6 +259,15 @@ Example:
 ui.widget.contact.selector
 ui.view.salesOrder.detail
 ```
+
+### 7.5 Signature schema pointers
+
+| Model             | `signature` fields (paths relative to `capability.json`) |
+| ----------------- | -------------------------------------------------------- |
+| request-response  | `requestSchema`, `responseSchema`, `errorSchema`         |
+| query-execution   | `querySchema`, `responseSchema`, `errorSchema`           |
+| ui-interaction    | `requestSchema`, `responseSchema`, `errorSchema`, `uiSchema` |
+| event-handler     | `eventSchema`, `errorSchema`                             |
 
 ---
 
@@ -373,6 +392,10 @@ Example:
   }
 }
 ```
+
+For packaged capabilities under `modules/<capability.name>/`, the `examples` array in `capability.json` typically lists JSON files such as `examples/success.json` (happy path) and `examples/failure.json` (validation or domain error payload), each containing a `request` and either a `response` or an `error` object.
+
+For **event-handler** capabilities, use an **`event`** object instead of `request` in those JSON files, and optionally a **`response`** ack object when the handler contract returns a processing acknowledgement (see `on.salesOrder.confirmed` in the module registry). Contract tests may still use a YAML `request:` block to supply the same payload shape for runners that expect a single input key.
 
 ---
 

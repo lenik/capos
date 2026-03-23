@@ -1,0 +1,10 @@
+{
+  "request": {
+    "title": "",
+    "assignee": "usr-1"
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "title is required"
+  }
+}

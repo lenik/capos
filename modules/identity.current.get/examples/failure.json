@@ -1,0 +1,8 @@
+{
+  "title": "unauthenticated",
+  "request": {},
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "Missing or invalid credentials"
+  }
+}

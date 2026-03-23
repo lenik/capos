@@ -1,0 +1,9 @@
+{
+  "request": {
+    "scheme": "unknown"
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "Unsupported scheme"
+  }
+}

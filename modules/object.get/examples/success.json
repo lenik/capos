@@ -1,0 +1,11 @@
+{
+  "request": {
+    "bucket": "erp-docs",
+    "objectKey": "2025/a.bin"
+  },
+  "response": {
+    "downloadUrl": "https://s3.example/presigned",
+    "expiresAt": "2025-03-23T17:00:00Z",
+    "sizeBytes": 2048
+  }
+}

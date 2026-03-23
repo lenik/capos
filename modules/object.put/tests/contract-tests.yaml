@@ -1,0 +1,17 @@
+tests:
+  - name: object-put-ok
+    request:
+      bucket: "b"
+      objectKey: "k"
+      contentType: "application/octet-stream"
+      sizeBytes: 1
+    expect:
+      status: "success"
+  - name: object-put-invalid
+    request:
+      bucket: ""
+      objectKey: "k"
+      contentType: "application/octet-stream"
+      sizeBytes: 1
+    expectError:
+      code: "INVALID_REQUEST"

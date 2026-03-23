@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "inventory.inbound",
+    "version": "1.0.0",
+    "category": "inventory",
+    "summary": "Post inbound stock (receipt) for an item at a warehouse.",
+    "lifecycle": "draft"
+  },
+  "type": "service",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": false,
+    "sideEffect": true,
+    "transactional": true
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

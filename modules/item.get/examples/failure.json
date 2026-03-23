@@ -1,0 +1,9 @@
+{
+  "request": {
+    "itemId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "item not found"
+  }
+}

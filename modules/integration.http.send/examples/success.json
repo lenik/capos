@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://partner.example/api/v1/status",
+    "timeoutMs": 5000
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": {
+      "status": "ok"
+    }
+  }
+}

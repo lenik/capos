@@ -1,0 +1,11 @@
+{
+  "request": {
+    "businessPartnerId": "cust-1",
+    "currency": "USD",
+    "lines": []
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "lines must not be empty"
+  }
+}

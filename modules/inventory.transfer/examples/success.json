@@ -1,0 +1,11 @@
+{
+  "request": {
+    "itemId": "it-1",
+    "fromWarehouseId": "wh-01",
+    "toWarehouseId": "wh-02",
+    "quantity": 4
+  },
+  "response": {
+    "transferId": "tr-1"
+  }
+}

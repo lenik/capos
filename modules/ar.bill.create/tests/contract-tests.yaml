@@ -1,0 +1,14 @@
+tests:
+  - name: ar-bill-create-ok
+    request:
+      businessPartnerId: "cust-1"
+      currency: "USD"
+      lines: [{"description": "L", "amount": 1}]
+    expect:
+      status: "success"
+  - name: ar-bill-create-invalid
+    request:
+      businessPartnerId: "cust-1"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

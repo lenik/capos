@@ -1,0 +1,9 @@
+{
+  "request": {
+    "salesOrderId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Sales order not found"
+  }
+}

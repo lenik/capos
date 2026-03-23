@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contacts",
+    "selectedCustomerId",
+    "page"
+  ],
+  "properties": {
+    "contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "customerId",
+          "displayName"
+        ],
+        "properties": {
+          "customerId": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "selectedCustomerId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "page": {
+      "$ref": "../../_shared/schemas/page-response.json"
+    }
+  }
+}

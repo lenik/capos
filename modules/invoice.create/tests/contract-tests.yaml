@@ -1,0 +1,14 @@
+tests:
+  - name: invoice-create-ok
+    request:
+      customerId: "cust-1"
+      currency: "USD"
+      lines: [{"description": "X", "amount": 1}]
+    expect:
+      status: "success"
+  - name: invoice-create-invalid
+    request:
+      customerId: "cust-1"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

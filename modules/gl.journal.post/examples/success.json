@@ -1,0 +1,22 @@
+{
+  "request": {
+    "postingDate": "2025-03-23",
+    "description": "Cash sale",
+    "lines": [
+      {
+        "accountId": "1000",
+        "debit": 100,
+        "credit": 0
+      },
+      {
+        "accountId": "4000",
+        "debit": 0,
+        "credit": 100
+      }
+    ]
+  },
+  "response": {
+    "journalEntryId": "je-900",
+    "status": "posted"
+  }
+}

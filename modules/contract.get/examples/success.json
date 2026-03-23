@@ -1,0 +1,12 @@
+{
+  "request": {
+    "contractId": "ctr-1"
+  },
+  "response": {
+    "contractId": "ctr-1",
+    "counterpartyId": "cus-001",
+    "status": "active",
+    "startDate": "2025-01-01",
+    "endDate": "2025-12-31"
+  }
+}

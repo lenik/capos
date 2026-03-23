@@ -1,0 +1,11 @@
+tests:
+  - name: ui-view-sales-order-detail-ok
+    request:
+      salesOrderId: "so-100"
+    expect:
+      status: "success"
+  - name: ui-view-sales-order-detail-not-found
+    request:
+      salesOrderId: "missing"
+    expectError:
+      code: "NOT_FOUND"

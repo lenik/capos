@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "downloadUrl",
+    "expiresAt",
+    "sizeBytes"
+  ],
+  "properties": {
+    "downloadUrl": {
+      "type": "string"
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sizeBytes": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

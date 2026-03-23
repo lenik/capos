@@ -1,0 +1,11 @@
+tests:
+  - name: work-order-get-ok
+    request:
+      workOrderId: "wo-77"
+    expect:
+      status: "success"
+  - name: work-order-get-not-found
+    request:
+      workOrderId: "missing"
+    expectError:
+      code: "NOT_FOUND"

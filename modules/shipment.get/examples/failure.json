@@ -1,0 +1,9 @@
+{
+  "request": {
+    "shipmentId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Shipment not found"
+  }
+}

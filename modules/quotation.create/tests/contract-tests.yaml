@@ -1,0 +1,15 @@
+tests:
+  - name: quotation-create-ok
+    request:
+      customerId: "cus-001"
+      currency: "USD"
+      lines: [{"itemId": "it-1", "quantity": 1, "unitPrice": 1}]
+    expect:
+      status: "success"
+  - name: quotation-create-invalid
+    request:
+      customerId: "cus-001"
+      currency: "USD"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

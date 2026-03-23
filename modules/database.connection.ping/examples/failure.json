@@ -1,0 +1,9 @@
+{
+  "request": {
+    "connectionHandle": "expired"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Connection handle unknown or expired"
+  }
+}

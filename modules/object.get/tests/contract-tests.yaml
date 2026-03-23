@@ -1,0 +1,13 @@
+tests:
+  - name: object-get-ok
+    request:
+      bucket: "b"
+      objectKey: "k"
+    expect:
+      status: "success"
+  - name: object-get-not-found
+    request:
+      bucket: "b"
+      objectKey: "missing"
+    expectError:
+      code: "NOT_FOUND"

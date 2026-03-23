@@ -1,0 +1,9 @@
+{
+  "request": {
+    "connectionHandle": "dbh-pool-7f3a"
+  },
+  "response": {
+    "ok": true,
+    "latencyMs": 2.5
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "workOrderId",
+    "itemId",
+    "quantity",
+    "plantId",
+    "status"
+  ],
+  "properties": {
+    "workOrderId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "plantId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

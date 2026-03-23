@@ -1,0 +1,15 @@
+tests:
+  - name: gl-journal-post-ok
+    request:
+      postingDate: "2025-03-23"
+      description: "Adj"
+      lines: [{"accountId": "1000", "debit": 1, "credit": 0}, {"accountId": "4000", "debit": 0, "credit": 1}]
+    expect:
+      status: "success"
+  - name: gl-journal-post-invalid
+    request:
+      postingDate: "2025-03-23"
+      description: "x"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

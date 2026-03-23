@@ -1,0 +1,12 @@
+{
+  "request": {
+    "itemId": "it-1",
+    "warehouseId": "wh-01",
+    "quantity": 3,
+    "reservationKey": "so-line-9"
+  },
+  "response": {
+    "reservationId": "res-1",
+    "expiresAt": "2025-03-24T00:00:00Z"
+  }
+}

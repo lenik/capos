@@ -1,0 +1,12 @@
+{
+  "request": {
+    "bucket": "",
+    "objectKey": "k",
+    "contentType": "application/octet-stream",
+    "sizeBytes": 1
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "bucket is required"
+  }
+}

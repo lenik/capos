@@ -1,0 +1,13 @@
+{
+  "request": {
+    "itemId": "it-1",
+    "warehouseId": "wh-01"
+  },
+  "response": {
+    "itemId": "it-1",
+    "warehouseId": "wh-01",
+    "onHand": 100,
+    "available": 80,
+    "reserved": 20
+  }
+}

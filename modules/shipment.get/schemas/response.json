@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "shipmentId",
+    "salesOrderId",
+    "status",
+    "lines"
+  ],
+  "properties": {
+    "shipmentId": {
+      "type": "string"
+    },
+    "salesOrderId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "trackingNumber": {
+      "type": "string"
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  }
+}

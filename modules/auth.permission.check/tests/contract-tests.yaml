@@ -1,0 +1,13 @@
+tests:
+  - name: auth-permission-allowed
+    request:
+      permission: "salesOrder.read"
+      resourceId: "so-9"
+    expect:
+      status: "success"
+  - name: auth-permission-denied
+    request:
+      permission: "gl.post"
+      resourceId: "je-1"
+    expect:
+      status: "success"

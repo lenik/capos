@@ -1,0 +1,11 @@
+{
+  "request": {
+    "receiptId": "rcpt-2"
+  },
+  "response": {
+    "receiptId": "rcpt-2",
+    "purchaseOrderId": "po-20",
+    "status": "posted",
+    "lines": []
+  }
+}

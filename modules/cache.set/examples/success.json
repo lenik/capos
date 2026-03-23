@@ -1,0 +1,13 @@
+{
+  "request": {
+    "namespace": "pricing",
+    "key": "item:it-1",
+    "value": {
+      "listPrice": 9.99
+    },
+    "ttlSeconds": 300
+  },
+  "response": {
+    "ok": true
+  }
+}

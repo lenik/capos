@@ -1,0 +1,10 @@
+tests:
+  - name: task-list-ok
+    request:
+    expect:
+      status: "success"
+  - name: task-list-bad-page
+    request:
+      page: {"limit": 0}
+    expectError:
+      code: "INVALID_REQUEST"

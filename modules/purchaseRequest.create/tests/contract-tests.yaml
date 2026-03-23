@@ -1,0 +1,13 @@
+tests:
+  - name: purchase-request-create-ok
+    request:
+      requestorId: "usr-1"
+      lines: [{"itemId": "it-1", "quantity": 1, "neededBy": "2025-04-01"}]
+    expect:
+      status: "success"
+  - name: purchase-request-create-invalid
+    request:
+      requestorId: "usr-1"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

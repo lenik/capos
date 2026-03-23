@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scheme"
+  ],
+  "properties": {
+    "scheme": {
+      "type": "string",
+      "enum": [
+        "uuid",
+        "snowflake",
+        "sequential"
+      ]
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000,
+      "default": 1
+    },
+    "namespace": {
+      "type": "string",
+      "description": "Optional logical namespace for sequential ids."
+    }
+  }
+}

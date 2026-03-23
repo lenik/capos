@@ -1,0 +1,9 @@
+tests:
+  - name: identity-current-ok
+    request:
+    expect:
+      status: "success"
+  - name: identity-current-unauthorized
+    request:
+    expectError:
+      code: "UNAUTHORIZED"

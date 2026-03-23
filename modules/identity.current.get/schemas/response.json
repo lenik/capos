@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subjectId",
+    "subjectType"
+  ],
+  "properties": {
+    "subjectId": {
+      "type": "string"
+    },
+    "subjectType": {
+      "type": "string",
+      "enum": [
+        "user",
+        "service",
+        "apiKey"
+      ]
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "orgUnitIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

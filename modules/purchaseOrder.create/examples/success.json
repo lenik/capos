@@ -1,0 +1,16 @@
+{
+  "request": {
+    "supplierId": "sup-1",
+    "currency": "USD",
+    "lines": [
+      {
+        "itemId": "it-1",
+        "quantity": 5
+      }
+    ]
+  },
+  "response": {
+    "purchaseOrderId": "po-20",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "request": {
+    "approvalRequestId": "apr-1",
+    "actorId": "usr-2",
+    "comment": "ok"
+  },
+  "response": {
+    "approvalRequestId": "apr-1",
+    "status": "approved"
+  }
+}

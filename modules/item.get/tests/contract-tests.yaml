@@ -1,0 +1,11 @@
+tests:
+  - name: item-get-ok
+    request:
+      itemId: "itm-001"
+    expect:
+      status: "success"
+  - name: item-get-not-found
+    request:
+      itemId: "missing"
+    expectError:
+      code: "NOT_FOUND"

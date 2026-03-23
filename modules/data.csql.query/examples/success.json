@@ -1,0 +1,23 @@
+{
+  "request": {
+    "sql": "SELECT customer_id, name FROM customers WHERE status = :s LIMIT :lim",
+    "parameters": {
+      "s": "active",
+      "lim": 10
+    },
+    "maxRows": 100
+  },
+  "response": {
+    "columns": [
+      "customer_id",
+      "name"
+    ],
+    "rows": [
+      {
+        "customer_id": "cus-001",
+        "name": "Acme"
+      }
+    ],
+    "truncated": false
+  }
+}

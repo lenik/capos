@@ -1,0 +1,11 @@
+{
+  "request": {
+    "provider": "stripe",
+    "eventId": "evt_bad",
+    "payload": {}
+  },
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "Invalid webhook signature"
+  }
+}

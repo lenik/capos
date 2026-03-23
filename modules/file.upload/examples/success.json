@@ -1,0 +1,11 @@
+{
+  "request": {
+    "fileName": "quote.pdf",
+    "contentType": "application/pdf",
+    "sizeBytes": 102400
+  },
+  "response": {
+    "fileId": "fil-9a2",
+    "uri": "s3://bucket/key"
+  }
+}

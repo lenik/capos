@@ -1,0 +1,12 @@
+{
+  "request": {
+    "scheme": "uuid",
+    "count": 2
+  },
+  "response": {
+    "ids": [
+      "a1b2c3",
+      "d4e5f6"
+    ]
+  }
+}

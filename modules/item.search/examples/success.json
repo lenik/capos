@@ -1,0 +1,21 @@
+{
+  "request": {
+    "query": "bolt",
+    "page": {
+      "limit": 20
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "itemId": "it-77",
+        "sku": "BOLT-M8",
+        "name": "M8 bolt",
+        "uom": "ea"
+      }
+    ],
+    "page": {
+      "hasMore": false
+    }
+  }
+}

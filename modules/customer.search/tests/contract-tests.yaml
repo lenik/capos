@@ -1,0 +1,12 @@
+tests:
+  - name: customer-search-ok
+    request:
+      query: "a"
+      page: {"limit": 5}
+    expect:
+      status: "success"
+  - name: customer-search-invalid-page
+    request:
+      page: {"limit": 9999}
+    expectError:
+      code: "INVALID_REQUEST"

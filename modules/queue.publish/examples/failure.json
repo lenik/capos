@@ -1,0 +1,10 @@
+{
+  "request": {
+    "topic": "",
+    "body": {}
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "topic is required"
+  }
+}

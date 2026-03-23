@@ -1,0 +1,11 @@
+tests:
+  - name: item-search-ok
+    request:
+      query: "b"
+    expect:
+      status: "success"
+  - name: item-search-invalid-page
+    request:
+      page: {"limit": 0}
+    expectError:
+      code: "INVALID_REQUEST"

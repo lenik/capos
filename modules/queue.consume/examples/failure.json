@@ -1,0 +1,10 @@
+{
+  "request": {
+    "subscriptionId": "",
+    "maxMessages": 5
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "subscriptionId is required"
+  }
+}

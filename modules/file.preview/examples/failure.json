@@ -1,0 +1,9 @@
+{
+  "request": {
+    "fileId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "File not found"
+  }
+}

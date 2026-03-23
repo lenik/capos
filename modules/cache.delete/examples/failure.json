@@ -1,0 +1,10 @@
+{
+  "request": {
+    "namespace": "",
+    "key": "k"
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "namespace is required"
+  }
+}

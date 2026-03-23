@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "itemId",
+    "warehouseId",
+    "onHand",
+    "available"
+  ],
+  "properties": {
+    "itemId": {
+      "type": "string"
+    },
+    "warehouseId": {
+      "type": "string"
+    },
+    "onHand": {
+      "type": "number",
+      "minimum": 0
+    },
+    "available": {
+      "type": "number",
+      "minimum": 0
+    },
+    "reserved": {
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

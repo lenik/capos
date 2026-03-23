@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "data.csql.query",
+    "version": "1.0.0",
+    "category": "data",
+    "summary": "Execute a catalog-safe constrained SQL (CSQL) query and return a tabular result set.",
+    "lifecycle": "draft"
+  },
+  "type": "data",
+  "signature": {
+    "model": "query-execution",
+    "querySchema": "schemas/query.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

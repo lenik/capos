@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/modules/_shared/schemas/list-query.json",
+  "title": "List query fragment",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "page": { "$ref": "page-request.json" },
+    "sort": {
+      "type": "array",
+      "items": { "$ref": "sort-entry.json" },
+      "maxItems": 8
+    },
+    "filters": {
+      "type": "array",
+      "items": { "$ref": "filter-clause.json" }
+    }
+  }
+}

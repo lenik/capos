@@ -1,0 +1,13 @@
+{
+  "title": "current user",
+  "request": {},
+  "response": {
+    "subjectId": "usr-1001",
+    "subjectType": "user",
+    "displayName": "Alice",
+    "email": "alice@example.com",
+    "orgUnitIds": [
+      "ou-east"
+    ]
+  }
+}

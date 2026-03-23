@@ -1,0 +1,15 @@
+tests:
+  - name: work-order-create-ok
+    request:
+      itemId: "it-1"
+      quantity: 1
+      plantId: "p1"
+    expect:
+      status: "success"
+  - name: work-order-create-invalid
+    request:
+      itemId: "it-1"
+      quantity: 0
+      plantId: "p1"
+    expectError:
+      code: "INVALID_REQUEST"

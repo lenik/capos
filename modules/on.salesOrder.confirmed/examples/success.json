@@ -1,0 +1,11 @@
+{
+  "event": {
+    "salesOrderId": "so-100",
+    "confirmedAt": "2025-03-23T10:00:00Z",
+    "confirmedBy": "usr-1",
+    "eventVersion": 1
+  },
+  "response": {
+    "ack": true
+  }
+}

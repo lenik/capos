@@ -1,0 +1,11 @@
+{
+  "request": {
+    "resourceType": "",
+    "resourceId": "po-20",
+    "policyKey": "default"
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "resourceType is required"
+  }
+}

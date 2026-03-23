@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "namespace",
+    "key",
+    "value"
+  ],
+  "properties": {
+    "namespace": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "value": true,
+    "ttlSeconds": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

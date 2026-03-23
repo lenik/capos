@@ -1,0 +1,11 @@
+tests:
+  - name: warehouse-get-ok
+    request:
+      warehouseId: "wh-01"
+    expect:
+      status: "success"
+  - name: warehouse-get-not-found
+    request:
+      warehouseId: "missing"
+    expectError:
+      code: "NOT_FOUND"

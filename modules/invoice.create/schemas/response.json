@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "invoiceId",
+    "status"
+  ],
+  "properties": {
+    "invoiceId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "totalAmount": {
+      "type": "number"
+    }
+  }
+}

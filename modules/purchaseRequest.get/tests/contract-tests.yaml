@@ -1,0 +1,11 @@
+tests:
+  - name: purchase-request-get-ok
+    request:
+      purchaseRequestId: "pr-10"
+    expect:
+      status: "success"
+  - name: purchase-request-get-not-found
+    request:
+      purchaseRequestId: "missing"
+    expectError:
+      code: "NOT_FOUND"

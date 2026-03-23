@@ -1,0 +1,12 @@
+tests:
+  - name: ui-contact-selector-search
+    request:
+      searchText: "a"
+      page: {"limit": 10}
+    expect:
+      status: "success"
+  - name: ui-contact-selector-not-found
+    request:
+      selectedCustomerId: "missing"
+    expectError:
+      code: "NOT_FOUND"

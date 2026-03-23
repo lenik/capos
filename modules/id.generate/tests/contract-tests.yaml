@@ -1,0 +1,12 @@
+tests:
+  - name: id-generate-uuid
+    request:
+      scheme: "uuid"
+      count: 1
+    expect:
+      status: "success"
+  - name: id-generate-invalid-scheme
+    request:
+      scheme: "unknown"
+    expectError:
+      code: "INVALID_REQUEST"

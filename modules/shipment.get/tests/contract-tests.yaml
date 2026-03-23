@@ -1,0 +1,11 @@
+tests:
+  - name: shipment-get-ok
+    request:
+      shipmentId: "shp-3"
+    expect:
+      status: "success"
+  - name: shipment-get-not-found
+    request:
+      shipmentId: "missing"
+    expectError:
+      code: "NOT_FOUND"

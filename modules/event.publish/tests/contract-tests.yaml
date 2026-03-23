@@ -1,0 +1,13 @@
+tests:
+  - name: event-publish-ok
+    request:
+      topic: "salesOrder.created"
+      payload: {"salesOrderId": "so-1"}
+    expect:
+      status: "success"
+  - name: event-publish-invalid
+    request:
+      topic: ""
+      payload: {}
+    expectError:
+      code: "INVALID_REQUEST"

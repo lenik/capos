@@ -1,0 +1,15 @@
+tests:
+  - name: receipt-create-ok
+    request:
+      purchaseOrderId: "po-20"
+      warehouseId: "wh-01"
+      lines: [{"itemId": "it-1", "quantity": 1}]
+    expect:
+      status: "success"
+  - name: receipt-create-invalid
+    request:
+      purchaseOrderId: "po-20"
+      warehouseId: "wh-01"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

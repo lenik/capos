@@ -1,0 +1,10 @@
+{
+  "request": {
+    "bucket": "erp-docs",
+    "objectKey": "none"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Object not found"
+  }
+}

@@ -1,0 +1,11 @@
+tests:
+  - name: contract-get-ok
+    request:
+      contractId: "ctr-1"
+    expect:
+      status: "success"
+  - name: contract-get-not-found
+    request:
+      contractId: "missing"
+    expectError:
+      code: "NOT_FOUND"

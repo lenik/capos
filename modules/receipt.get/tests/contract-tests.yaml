@@ -1,0 +1,11 @@
+tests:
+  - name: receipt-get-ok
+    request:
+      receiptId: "rcpt-2"
+    expect:
+      status: "success"
+  - name: receipt-get-not-found
+    request:
+      receiptId: "missing"
+    expectError:
+      code: "NOT_FOUND"

@@ -1,0 +1,14 @@
+{
+  "request": {
+    "topic": "erp.inventory.movement",
+    "body": {
+      "movementId": "mov-1"
+    },
+    "attributes": {
+      "correlationId": "c1"
+    }
+  },
+  "response": {
+    "messageId": "msg-77"
+  }
+}

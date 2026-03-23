@@ -1,0 +1,16 @@
+{
+  "request": {
+    "requestorId": "usr-1",
+    "lines": [
+      {
+        "itemId": "it-1",
+        "quantity": 5,
+        "neededBy": "2025-04-01"
+      }
+    ]
+  },
+  "response": {
+    "purchaseRequestId": "pr-10",
+    "status": "draft"
+  }
+}

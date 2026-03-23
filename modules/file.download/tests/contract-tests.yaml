@@ -1,0 +1,11 @@
+tests:
+  - name: file-download-ok
+    request:
+      fileId: "fil-9a2"
+    expect:
+      status: "success"
+  - name: file-download-not-found
+    request:
+      fileId: "missing"
+    expectError:
+      code: "NOT_FOUND"

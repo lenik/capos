@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "supplier.get",
+    "version": "1.0.0",
+    "category": "supplier",
+    "summary": "Retrieve a single supplier by identifier.",
+    "lifecycle": "draft"
+  },
+  "type": "service",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

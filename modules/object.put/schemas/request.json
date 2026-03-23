@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bucket",
+    "objectKey",
+    "contentType",
+    "sizeBytes"
+  ],
+  "properties": {
+    "bucket": {
+      "type": "string"
+    },
+    "objectKey": {
+      "type": "string"
+    },
+    "contentType": {
+      "type": "string"
+    },
+    "sizeBytes": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

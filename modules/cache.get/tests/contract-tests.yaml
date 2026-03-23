@@ -1,0 +1,13 @@
+tests:
+  - name: cache-get-hit
+    request:
+      namespace: "n"
+      key: "k"
+    expect:
+      status: "success"
+  - name: cache-get-miss
+    request:
+      namespace: "n"
+      key: "unknown"
+    expect:
+      status: "success"

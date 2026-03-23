@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "connectionHandle"
+  ],
+  "properties": {
+    "connectionHandle": {
+      "type": "string",
+      "description": "Opaque handle from the pool; not a SQL string."
+    }
+  }
+}

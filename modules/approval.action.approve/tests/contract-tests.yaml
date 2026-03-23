@@ -1,0 +1,13 @@
+tests:
+  - name: approval-action-approve-ok
+    request:
+      approvalRequestId: "apr-1"
+      actorId: "usr-2"
+    expect:
+      status: "success"
+  - name: approval-action-approve-not-found
+    request:
+      approvalRequestId: "missing"
+      actorId: "usr-2"
+    expectError:
+      code: "NOT_FOUND"

@@ -1,0 +1,363 @@
+Here is a practical **TODO list for ERP CapSpec definitions**.
+
+```markdown
+# ERP CapSpec Definition TODO List
+
+## 1. Define the CapSpec foundation
+
+- [ ] Finalize the official name: **CapSpec**
+- [ ] Freeze the CapSpec core document structure
+- [ ] Freeze required fields for every capability definition
+- [ ] Freeze capability versioning rules
+- [ ] Freeze naming rules (`domain.action`)
+- [ ] Freeze lifecycle states (`Draft`, `Stable`, `Deprecated`, `Retired`)
+- [ ] Freeze common error model
+- [ ] Freeze common semantics fields (`idempotent`, `sideEffect`, `transactional`)
+- [ ] Freeze contract test file format
+- [ ] Freeze example file format
+
+---
+
+## 2. Define the capability type system
+
+- [ ] Finalize top-level capability types
+  - [ ] service
+  - [ ] event-handler
+  - [ ] data
+  - [ ] resource
+  - [ ] ui
+  - [ ] integration
+- [ ] Define signature model for each type
+- [ ] Define validation method for each type
+- [ ] Define test strategy for each type
+- [ ] Define file layout conventions for each type
+
+---
+
+## 3. Define common shared schemas
+
+- [ ] Standard request envelope schema
+- [ ] Standard response envelope schema
+- [ ] Standard error schema
+- [ ] Pagination request schema
+- [ ] Pagination response schema
+- [ ] Standard list query schema
+- [ ] Standard search query schema
+- [ ] Standard sort schema
+- [ ] Standard filter schema
+- [ ] Standard identifier schema
+- [ ] Standard timestamp/date schema
+- [ ] Standard money/amount schema
+- [ ] Standard code/name pair schema
+- [ ] Standard status enum schema
+
+---
+
+## 4. Build the ERP capability domain map
+
+- [ ] Freeze ERP top-level domains
+  - [ ] identity
+  - [ ] auth
+  - [ ] org
+  - [ ] customer
+  - [ ] supplier
+  - [ ] item
+  - [ ] warehouse
+  - [ ] inventory
+  - [ ] quotation
+  - [ ] salesOrder
+  - [ ] purchaseRequest
+  - [ ] purchaseOrder
+  - [ ] shipment
+  - [ ] receipt
+  - [ ] invoice
+  - [ ] payment
+  - [ ] contract
+  - [ ] productionPlan
+  - [ ] workOrder
+  - [ ] materialIssue
+  - [ ] qualityInspection
+  - [ ] ar
+  - [ ] ap
+  - [ ] gl
+  - [ ] cost
+  - [ ] tax
+  - [ ] budget
+  - [ ] task
+  - [ ] approval
+  - [ ] activeItem
+  - [ ] report
+  - [ ] search
+  - [ ] integration
+- [ ] Freeze naming boundaries between domains
+- [ ] Eliminate overlapping domains
+- [ ] Eliminate duplicate verbs across domains
+
+---
+
+## 5. Prioritize the first batch of ERP capabilities
+
+### Platform core
+- [ ] `identity.current.get`
+- [ ] `auth.permission.check`
+- [ ] `id.generate`
+- [ ] `event.publish`
+
+### Master data
+- [ ] `customer.get`
+- [ ] `customer.search`
+- [ ] `supplier.get`
+- [ ] `supplier.search`
+- [ ] `item.get`
+- [ ] `item.search`
+- [ ] `warehouse.get`
+- [ ] `warehouse.list`
+
+### Transaction core
+- [ ] `salesOrder.create`
+- [ ] `salesOrder.get`
+- [ ] `purchaseOrder.create`
+- [ ] `purchaseOrder.get`
+
+### Inventory core
+- [ ] `inventory.get`
+- [ ] `inventory.reserve`
+- [ ] `inventory.inbound`
+- [ ] `inventory.outbound`
+- [ ] `inventory.transfer`
+
+### Finance core
+- [ ] `invoice.create`
+- [ ] `payment.execute`
+- [ ] `ar.bill.create`
+- [ ] `ap.bill.create`
+
+### Flow-state core
+- [ ] `task.create`
+- [ ] `task.list`
+- [ ] `approval.request.create`
+- [ ] `approval.action.approve`
+- [ ] `approval.action.reject`
+
+---
+
+## 6. Write CapSpec definitions for each priority capability
+
+For each capability:
+
+- [ ] Define `name`
+- [ ] Define `version`
+- [ ] Define `type`
+- [ ] Define `summary`
+- [ ] Define signature model
+- [ ] Define request schema
+- [ ] Define response schema
+- [ ] Define error schema
+- [ ] Define semantics
+- [ ] Add at least one success example
+- [ ] Add at least one failure example
+- [ ] Add contract tests
+- [ ] Mark lifecycle stage
+
+---
+
+## 7. Define CRUD conventions for ERP capabilities
+
+- [ ] Decide when to use `.create`
+- [ ] Decide when to use `.update`
+- [ ] Decide when to use `.get`
+- [ ] Decide when to use `.list`
+- [ ] Decide when to use `.search`
+- [ ] Decide when to use `.delete`
+- [ ] Decide when to use domain verbs instead of CRUD
+  - [ ] `.confirm`
+  - [ ] `.approve`
+  - [ ] `.reject`
+  - [ ] `.issue`
+  - [ ] `.reserve`
+  - [ ] `.transfer`
+- [ ] Ban vague verbs
+  - [ ] `process`
+  - [ ] `handle`
+  - [ ] `operate`
+  - [ ] `manage`
+
+---
+
+## 8. Define ERP data capability conventions
+
+- [ ] Define standard SQL capability rules
+- [ ] Define CSQL capability rules
+- [ ] Define query schema format
+- [ ] Define query result format
+- [ ] Define safe query boundaries
+- [ ] Define paging rules for query capabilities
+- [ ] Define aggregate query rules
+- [ ] Define reporting query rules
+- [ ] Define read-only vs mutating data capabilities
+
+---
+
+## 9. Define ERP resource capability conventions
+
+### Files
+- [ ] `file.upload`
+- [ ] `file.download`
+- [ ] `file.delete`
+- [ ] `file.preview`
+
+### Object storage
+- [ ] `object.put`
+- [ ] `object.get`
+- [ ] `object.delete`
+
+### Cache
+- [ ] `cache.get`
+- [ ] `cache.set`
+- [ ] `cache.delete`
+
+### Queue
+- [ ] `queue.publish`
+- [ ] `queue.consume`
+
+### Database resource
+- [ ] define database resource capability model
+- [ ] distinguish database resource from business data capability
+
+---
+
+## 10. Define ERP UI capability conventions
+
+- [ ] Finalize UI capability model structure
+  - [ ] input model
+  - [ ] ui model
+  - [ ] action set
+  - [ ] output model
+- [ ] Define UI capability types
+  - [ ] `ui.view.*`
+  - [ ] `ui.widget.*`
+  - [ ] `ui.action.*`
+- [ ] Define UI model test format
+- [ ] Define UI binding declaration format
+- [ ] Define how UI capability declares backend capability bindings
+- [ ] Define UI packaging conventions
+- [ ] Define UI lifecycle and mount rules
+
+---
+
+## 11. Define ERP event capability conventions
+
+- [ ] Freeze event naming rules
+- [ ] Freeze event payload schema format
+- [ ] Freeze event versioning rules
+- [ ] Freeze event handler signature
+- [ ] Freeze event simulation test format
+- [ ] Define domain event boundaries
+- [ ] Define event naming for transaction milestones
+  - [ ] created
+  - [ ] confirmed
+  - [ ] approved
+  - [ ] rejected
+  - [ ] completed
+  - [ ] cancelled
+
+---
+
+## 12. Define integration capability conventions
+
+- [ ] Define `integration.*` naming rules
+- [ ] Define HTTP integration request model
+- [ ] Define webhook receive model
+- [ ] Define mapping/transform model
+- [ ] Define sync/import/export capability forms
+- [ ] Define integration mock testing strategy
+- [ ] Define external error mapping rules
+
+---
+
+## 13. Create ERP CapSpec templates
+
+- [ ] Service capability template
+- [ ] Event-handler capability template
+- [ ] Data capability template
+- [ ] Resource capability template
+- [ ] UI capability template
+- [ ] Integration capability template
+
+---
+
+## 14. Create the first full sample set
+
+- [ ] Full CapSpec for `customer.get`
+- [ ] Full CapSpec for `item.search`
+- [ ] Full CapSpec for `inventory.reserve`
+- [ ] Full CapSpec for `salesOrder.create`
+- [ ] Full CapSpec for `invoice.create`
+- [ ] Full CapSpec for `approval.action.approve`
+- [ ] Full CapSpec for `ui.widget.contact.selector`
+- [ ] Full CapSpec for `data.csql.query`
+
+---
+
+## 15. Build review and quality gates
+
+- [ ] Naming review checklist
+- [ ] schema review checklist
+- [ ] semantic review checklist
+- [ ] duplicate capability review checklist
+- [ ] version review checklist
+- [ ] contract test completeness checklist
+- [ ] example completeness checklist
+- [ ] lifecycle status review checklist
+
+---
+
+## 16. Build the ERP CapSpec registry structure
+
+- [ ] Define directory structure
+- [ ] Define per-domain folders
+- [ ] Define version folders
+- [ ] Define file naming rules
+- [ ] Define registry index format
+- [ ] Define search metadata fields
+- [ ] Define deprecation markers
+
+---
+
+## 17. Build automation support
+
+- [ ] CapSpec JSON schema validator
+- [ ] contract test runner
+- [ ] example validator
+- [ ] schema linter
+- [ ] naming linter
+- [ ] version compatibility checker
+- [ ] capability registry builder
+- [ ] documentation generator
+- [ ] mock server generator
+- [ ] SDK generator
+
+---
+
+## 18. Final consolidation
+
+- [ ] Review all first-batch ERP capability names
+- [ ] merge duplicates
+- [ ] split overloaded capabilities
+- [ ] remove vague capabilities
+- [ ] mark stable first-batch CapSpecs
+- [ ] publish ERP CapSpec baseline v1.0
+```
+
+A strong execution order would be:
+
+1. **CapSpec foundation**
+2. **Capability type system**
+3. **Shared schemas**
+4. **ERP domain map**
+5. **First 20–30 priority capabilities**
+6. **Templates + examples**
+7. **Automation**
+
+I can turn this into a **phased roadmap with milestones** next.
+

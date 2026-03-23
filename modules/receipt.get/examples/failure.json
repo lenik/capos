@@ -1,0 +1,9 @@
+{
+  "request": {
+    "receiptId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Receipt not found"
+  }
+}

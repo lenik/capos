@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "file.preview",
+    "version": "1.0.0",
+    "category": "file",
+    "summary": "Obtain a preview URL or rendition for an image or document file.",
+    "lifecycle": "draft"
+  },
+  "type": "resource",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

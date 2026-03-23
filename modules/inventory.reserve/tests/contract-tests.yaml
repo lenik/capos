@@ -1,0 +1,15 @@
+tests:
+  - name: inventory-reserve-ok
+    request:
+      itemId: "it-1"
+      warehouseId: "wh-01"
+      quantity: 1
+    expect:
+      status: "success"
+  - name: inventory-reserve-insufficient
+    request:
+      itemId: "it-1"
+      warehouseId: "wh-01"
+      quantity: 999999
+    expectError:
+      code: "INSUFFICIENT_STOCK"

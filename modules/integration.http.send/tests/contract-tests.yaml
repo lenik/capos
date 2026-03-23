@@ -1,0 +1,14 @@
+tests:
+  - name: integration-http-send-ok
+    request:
+      method: "GET"
+      url: "https://example.com/"
+      timeoutMs: 3000
+    expect:
+      status: "success"
+  - name: integration-http-send-invalid-url
+    request:
+      method: "GET"
+      url: "%%%"
+    expectError:
+      code: "INVALID_REQUEST"

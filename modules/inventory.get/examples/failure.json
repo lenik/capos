@@ -1,0 +1,10 @@
+{
+  "request": {
+    "itemId": "x",
+    "warehouseId": "y"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "No inventory record for item/warehouse"
+  }
+}

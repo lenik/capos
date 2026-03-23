@@ -1,0 +1,9 @@
+{
+  "request": {
+    "customerId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "customer not found"
+  }
+}

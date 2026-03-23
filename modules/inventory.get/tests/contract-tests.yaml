@@ -1,0 +1,13 @@
+tests:
+  - name: inventory-get-ok
+    request:
+      itemId: "it-1"
+      warehouseId: "wh-01"
+    expect:
+      status: "success"
+  - name: inventory-get-not-found
+    request:
+      itemId: "x"
+      warehouseId: "y"
+    expectError:
+      code: "NOT_FOUND"

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "requestorId": "usr-1",
+    "lines": []
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "lines must not be empty"
+  }
+}

@@ -1,0 +1,14 @@
+tests:
+  - name: purchase-order-create-ok
+    request:
+      supplierId: "sup-1"
+      currency: "USD"
+      lines: [{"itemId": "it-1", "quantity": 1}]
+    expect:
+      status: "success"
+  - name: purchase-order-create-invalid
+    request:
+      supplierId: "sup-1"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

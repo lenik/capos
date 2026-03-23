@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/schemas/capspec.schema.json",
+  "title": "CapSpec",
+  "description": "JSON Schema for the Capability Description Specification (capability.json).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["capability", "type", "signature", "semantics"],
+  "properties": {
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Capability name: dot-separated segments (lowerCamelCase per segment, e.g. customer.get, salesOrder.create, approval.action.approve).",
+          "pattern": "^([a-z][a-zA-Z0-9]*)(\\.[a-z][a-zA-Z0-9]*)+$",
+          "examples": ["contact.get", "salesOrder.create", "approval.action.approve"]
+        },
+        "version": {
+          "type": "string",
+          "description": "Semantic version MAJOR.MINOR.PATCH.",
+          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+        },
+        "category": {
+          "type": "string",
+          "description": "Grouping label, often the domain segment."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Short human-readable description."
+        },
+        "lifecycle": {
+          "type": "string",
+          "description": "Lifecycle stage of the capability contract.",
+          "enum": ["draft", "stable", "deprecated", "retired"]
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "Kind of capability contract.",
+      "enum": [
+        "service",
+        "event-handler",
+        "data",
+        "resource",
+        "ui",
+        "integration"
+      ]
+    },
+    "signature": {
+      "type": "object",
+      "description": "Contract shape: model and references to JSON Schemas for payloads. The spec fully illustrates request-response; other models may add schema pointers as needed.",
+      "required": ["model"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "description": "Signature model (see Capability Signature Models in the CapSpec document).",
+          "enum": [
+            "request-response",
+            "event-handler",
+            "query-execution",
+            "ui-interaction"
+          ]
+        },
+        "requestSchema": {
+          "type": "string",
+          "description": "URI or relative path to the request/input JSON Schema (request-response, ui-interaction)."
+        },
+        "responseSchema": {
+          "type": "string",
+          "description": "URI or relative path to the response/output JSON Schema."
+        },
+        "errorSchema": {
+          "type": "string",
+          "description": "URI or relative path to the error JSON Schema."
+        },
+        "querySchema": {
+          "type": "string",
+          "description": "URI or relative path to the query payload JSON Schema (query-execution / data capabilities)."
+        },
+        "eventSchema": {
+          "type": "string",
+          "description": "URI or relative path to the event payload JSON Schema (event-handler)."
+        },
+        "uiSchema": {
+          "type": "string",
+          "description": "URI or relative path to the widget/view binding JSON Schema (ui-interaction)."
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": {
+            "properties": { "model": { "const": "request-response" } },
+            "required": ["model"]
+          },
+          "then": {
+            "required": ["requestSchema", "responseSchema", "errorSchema"]
+          }
+        },
+        {
+          "if": {
+            "properties": { "model": { "const": "query-execution" } },
+            "required": ["model"]
+          },
+          "then": {
+            "required": ["querySchema", "responseSchema", "errorSchema"]
+          }
+        },
+        {
+          "if": {
+            "properties": { "model": { "const": "ui-interaction" } },
+            "required": ["model"]
+          },
+          "then": {
+            "required": ["requestSchema", "responseSchema", "errorSchema", "uiSchema"]
+          }
+        },
+        {
+          "if": {
+            "properties": { "model": { "const": "event-handler" } },
+            "required": ["model"]
+          },
+          "then": {
+            "required": ["eventSchema", "errorSchema"]
+          }
+        }
+      ]
+    },
+    "semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["idempotent", "sideEffect", "transactional"],
+      "properties": {
+        "idempotent": {
+          "type": "boolean",
+          "description": "Repeated calls produce the same result."
+        },
+        "sideEffect": {
+          "type": "boolean",
+          "description": "Whether the capability may modify system state."
+        },
+        "transactional": {
+          "type": "boolean",
+          "description": "Whether execution must occur within a transaction."
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "description": "Example file paths and/or inline example objects.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "Path to an example file (e.g. examples/example1.json)."
+          },
+          {
+            "type": "object",
+            "description": "Inline request/response example.",
+            "properties": {
+              "request": true,
+              "response": true
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "tests": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contractTests": {
+          "type": "string",
+          "description": "Path to contract test definition (e.g. YAML)."
+        }
+      }
+    }
+  }
+}

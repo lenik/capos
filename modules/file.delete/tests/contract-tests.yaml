@@ -1,0 +1,11 @@
+tests:
+  - name: file-delete-ok
+    request:
+      fileId: "fil-9a2"
+    expect:
+      status: "success"
+  - name: file-delete-not-found
+    request:
+      fileId: "missing"
+    expectError:
+      code: "NOT_FOUND"

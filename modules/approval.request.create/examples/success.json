@@ -1,0 +1,11 @@
+{
+  "request": {
+    "resourceType": "purchaseOrder",
+    "resourceId": "po-20",
+    "policyKey": "po.manager"
+  },
+  "response": {
+    "approvalRequestId": "apr-1",
+    "status": "pending"
+  }
+}

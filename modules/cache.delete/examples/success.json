@@ -1,0 +1,9 @@
+{
+  "request": {
+    "namespace": "pricing",
+    "key": "item:it-1"
+  },
+  "response": {
+    "deleted": true
+  }
+}

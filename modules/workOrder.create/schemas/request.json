@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "itemId",
+    "quantity",
+    "plantId"
+  ],
+  "properties": {
+    "itemId": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "plantId": {
+      "type": "string"
+    },
+    "productionPlanId": {
+      "type": "string"
+    }
+  }
+}

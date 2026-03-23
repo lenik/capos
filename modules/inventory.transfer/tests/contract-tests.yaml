@@ -1,0 +1,17 @@
+tests:
+  - name: inventory-transfer-ok
+    request:
+      itemId: "it-1"
+      fromWarehouseId: "wh-01"
+      toWarehouseId: "wh-02"
+      quantity: 1
+    expect:
+      status: "success"
+  - name: inventory-transfer-same-warehouse
+    request:
+      itemId: "it-1"
+      fromWarehouseId: "wh-01"
+      toWarehouseId: "wh-01"
+      quantity: 1
+    expectError:
+      code: "INVALID_REQUEST"

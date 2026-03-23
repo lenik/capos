@@ -1,0 +1,21 @@
+{
+  "request": {
+    "salesOrderId": "so-100"
+  },
+  "response": {
+    "header": {
+      "salesOrderId": "so-100",
+      "customerId": "cus-001",
+      "status": "confirmed",
+      "currency": "USD",
+      "totalAmount": 250
+    },
+    "lines": [
+      {
+        "lineId": "1",
+        "itemId": "it-1",
+        "quantity": 2
+      }
+    ]
+  }
+}

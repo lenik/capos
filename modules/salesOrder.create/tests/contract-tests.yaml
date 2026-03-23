@@ -1,0 +1,14 @@
+tests:
+  - name: sales-order-create-ok
+    request:
+      customerId: "cust-1"
+      currency: "USD"
+      lines: [{"itemId": "it-1", "quantity": 1}]
+    expect:
+      status: "success"
+  - name: sales-order-create-invalid
+    request:
+      customerId: "cust-1"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "not-a-url"
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "url must be a valid URI"
+  }
+}

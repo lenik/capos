@@ -1,0 +1,15 @@
+tests:
+  - name: payment-execute-ok
+    request:
+      amount: 10
+      currency: "USD"
+      method: "cash"
+    expect:
+      status: "success"
+  - name: payment-execute-invalid
+    request:
+      amount: -1
+      currency: "USD"
+      method: "cash"
+    expectError:
+      code: "INVALID_REQUEST"

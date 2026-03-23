@@ -1,0 +1,17 @@
+{
+  "request": {
+    "subscriptionId": "sub-inv",
+    "maxMessages": 10
+  },
+  "response": {
+    "messages": [
+      {
+        "messageId": "msg-77",
+        "body": {
+          "movementId": "mov-1"
+        },
+        "attributes": {}
+      }
+    ]
+  }
+}

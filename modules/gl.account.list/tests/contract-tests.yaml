@@ -1,0 +1,10 @@
+tests:
+  - name: gl-account-list-ok
+    request:
+    expect:
+      status: "success"
+  - name: gl-account-list-bad-page
+    request:
+      page: {"limit": 10000}
+    expectError:
+      code: "INVALID_REQUEST"

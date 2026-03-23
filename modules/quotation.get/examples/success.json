@@ -1,0 +1,12 @@
+{
+  "request": {
+    "quotationId": "qt-50"
+  },
+  "response": {
+    "quotationId": "qt-50",
+    "customerId": "cus-001",
+    "status": "sent",
+    "currency": "USD",
+    "lines": []
+  }
+}

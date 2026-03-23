@@ -1,0 +1,13 @@
+tests:
+  - name: cache-delete-ok
+    request:
+      namespace: "n"
+      key: "k"
+    expect:
+      status: "success"
+  - name: cache-delete-invalid
+    request:
+      namespace: ""
+      key: "k"
+    expectError:
+      code: "INVALID_REQUEST"

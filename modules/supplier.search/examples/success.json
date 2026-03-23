@@ -1,0 +1,22 @@
+{
+  "request": {
+    "query": "acme",
+    "page": {
+      "limit": 10
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "supplierId": "sup-001",
+        "code": "C001",
+        "name": "Acme",
+        "status": "active"
+      }
+    ],
+    "page": {
+      "hasMore": false,
+      "totalCount": 1
+    }
+  }
+}

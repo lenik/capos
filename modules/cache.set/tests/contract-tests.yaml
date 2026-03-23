@@ -1,0 +1,15 @@
+tests:
+  - name: cache-set-ok
+    request:
+      namespace: "n"
+      key: "k"
+      value: {"a": 1}
+    expect:
+      status: "success"
+  - name: cache-set-invalid
+    request:
+      namespace: ""
+      key: "k"
+      value: 1
+    expectError:
+      code: "INVALID_REQUEST"

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "warehouseId",
+    "code",
+    "name",
+    "status"
+  ],
+  "properties": {
+    "warehouseId": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

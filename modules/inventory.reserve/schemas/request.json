@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "itemId",
+    "warehouseId",
+    "quantity"
+  ],
+  "properties": {
+    "itemId": {
+      "type": "string"
+    },
+    "warehouseId": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "reservationKey": {
+      "type": "string",
+      "description": "Idempotency key for the same business reservation."
+    }
+  }
+}

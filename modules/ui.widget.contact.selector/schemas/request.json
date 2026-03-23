@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "uiContext": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "searchText": {
+      "type": "string"
+    },
+    "selectedCustomerId": {
+      "type": "string"
+    },
+    "page": {
+      "$ref": "../../_shared/schemas/page-request.json"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "items",
+    "page"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "itemId",
+          "sku",
+          "name"
+        ],
+        "properties": {
+          "itemId": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "uom": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "page": {
+      "$ref": "../../_shared/schemas/page-response.json"
+    }
+  }
+}

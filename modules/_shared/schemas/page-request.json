@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/modules/_shared/schemas/page-request.json",
+  "title": "Cursor/limit page request fragment",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500,
+      "default": 50
+    },
+    "cursor": {
+      "type": "string",
+      "description": "Opaque continuation token from a previous response."
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "request": {
+    "orgUnitId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Organization unit not found"
+  }
+}

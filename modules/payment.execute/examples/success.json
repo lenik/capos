@@ -1,0 +1,13 @@
+{
+  "request": {
+    "amount": 120,
+    "currency": "USD",
+    "method": "ach",
+    "invoiceId": "inv-1"
+  },
+  "response": {
+    "paymentId": "pay-1",
+    "status": "completed",
+    "processedAt": "2025-03-23T12:00:00Z"
+  }
+}

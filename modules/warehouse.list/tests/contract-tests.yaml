@@ -1,0 +1,10 @@
+tests:
+  - name: warehouse-list-ok
+    request:
+    expect:
+      status: "success"
+  - name: warehouse-list-bad-limit
+    request:
+      page: {"limit": 10000}
+    expectError:
+      code: "INVALID_REQUEST"

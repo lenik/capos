@@ -1,0 +1,9 @@
+{
+  "request": {
+    "quotationId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Quotation not found"
+  }
+}

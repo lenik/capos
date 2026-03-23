@@ -1,0 +1,20 @@
+{
+  "request": {
+    "page": {
+      "limit": 50
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "warehouseId": "wh-01",
+        "code": "EAST-01",
+        "name": "East DC",
+        "status": "active"
+      }
+    ],
+    "page": {
+      "hasMore": false
+    }
+  }
+}

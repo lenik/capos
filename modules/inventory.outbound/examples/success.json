@@ -1,0 +1,15 @@
+{
+  "request": {
+    "warehouseId": "wh-01",
+    "referenceId": "rcpt-1",
+    "lines": [
+      {
+        "itemId": "it-1",
+        "quantity": 10
+      }
+    ]
+  },
+  "response": {
+    "movementId": "mov-1"
+  }
+}

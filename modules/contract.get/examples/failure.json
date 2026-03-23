@@ -1,0 +1,9 @@
+{
+  "request": {
+    "contractId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Contract not found"
+  }
+}

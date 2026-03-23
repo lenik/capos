@@ -1,0 +1,11 @@
+{
+  "request": {
+    "purchaseOrderId": "po-20"
+  },
+  "response": {
+    "purchaseOrderId": "po-20",
+    "supplierId": "sup-1",
+    "status": "open",
+    "lines": []
+  }
+}

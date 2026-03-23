@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "file.delete",
+    "version": "1.0.0",
+    "category": "file",
+    "summary": "Delete a stored file by id (irreversible).",
+    "lifecycle": "draft"
+  },
+  "type": "resource",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": false,
+    "sideEffect": true,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

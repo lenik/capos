@@ -1,0 +1,11 @@
+{
+  "request": {
+    "itemId": "it-fg-1",
+    "quantity": 0,
+    "plantId": "plant-01"
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "quantity must be positive"
+  }
+}

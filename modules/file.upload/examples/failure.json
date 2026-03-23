@@ -1,0 +1,11 @@
+{
+  "request": {
+    "fileName": "",
+    "contentType": "application/pdf",
+    "sizeBytes": 0
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "fileName is required"
+  }
+}

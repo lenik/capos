@@ -1,0 +1,9 @@
+{
+  "request": {
+    "supplierId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "supplier not found"
+  }
+}

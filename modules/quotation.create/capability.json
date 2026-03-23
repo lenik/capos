@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "quotation.create",
+    "version": "1.0.0",
+    "category": "quotation",
+    "summary": "Create a sales quotation with lines and optional validity date.",
+    "lifecycle": "draft"
+  },
+  "type": "service",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": false,
+    "sideEffect": true,
+    "transactional": true
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

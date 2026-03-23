@@ -1,0 +1,12 @@
+{
+  "request": {
+    "fileId": "fil-9a2"
+  },
+  "response": {
+    "downloadUrl": "https://storage.example/get?sig=abc",
+    "expiresAt": "2025-03-23T15:00:00Z",
+    "fileName": "quote.pdf",
+    "contentType": "application/pdf",
+    "sizeBytes": 102400
+  }
+}

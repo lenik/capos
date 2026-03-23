@@ -1,0 +1,11 @@
+tests:
+  - name: supplier-get-ok
+    request:
+      supplierId: "sup-001"
+    expect:
+      status: "success"
+  - name: supplier-get-not-found
+    request:
+      supplierId: "missing"
+    expectError:
+      code: "NOT_FOUND"

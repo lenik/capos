@@ -1,0 +1,10 @@
+{
+  "request": {
+    "fileId": "fil-9a2",
+    "variant": "thumb"
+  },
+  "response": {
+    "previewUrl": "https://cdn.example/p/fil-9a2-thumb",
+    "expiresAt": "2025-03-23T16:00:00Z"
+  }
+}

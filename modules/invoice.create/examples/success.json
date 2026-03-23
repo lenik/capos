@@ -1,0 +1,17 @@
+{
+  "request": {
+    "customerId": "cust-1",
+    "currency": "USD",
+    "lines": [
+      {
+        "description": "Widget",
+        "amount": 50
+      }
+    ]
+  },
+  "response": {
+    "invoiceId": "inv-1",
+    "status": "draft",
+    "totalAmount": 50
+  }
+}

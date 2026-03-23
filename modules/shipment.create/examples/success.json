@@ -1,0 +1,16 @@
+{
+  "request": {
+    "salesOrderId": "so-100",
+    "warehouseId": "wh-01",
+    "lines": [
+      {
+        "itemId": "it-1",
+        "quantity": 2
+      }
+    ]
+  },
+  "response": {
+    "shipmentId": "shp-3",
+    "status": "draft"
+  }
+}

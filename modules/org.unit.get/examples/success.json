@@ -1,0 +1,12 @@
+{
+  "request": {
+    "orgUnitId": "ou-east"
+  },
+  "response": {
+    "orgUnitId": "ou-east",
+    "code": "EAST",
+    "name": "East Region",
+    "orgUnitType": "region",
+    "parentOrgUnitId": "ou-root"
+  }
+}

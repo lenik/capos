@@ -1,0 +1,21 @@
+{
+  "request": {
+    "searchText": "ac",
+    "page": {
+      "limit": 5
+    }
+  },
+  "response": {
+    "contacts": [
+      {
+        "customerId": "cus-001",
+        "displayName": "Acme Corp",
+        "subtitle": "C001"
+      }
+    ],
+    "selectedCustomerId": null,
+    "page": {
+      "hasMore": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+tests:
+  - name: org-unit-get-ok
+    request:
+      orgUnitId: "ou-east"
+    expect:
+      status: "success"
+  - name: org-unit-get-not-found
+    request:
+      orgUnitId: "missing"
+    expectError:
+      code: "NOT_FOUND"

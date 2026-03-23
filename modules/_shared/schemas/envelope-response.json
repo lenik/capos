@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/modules/_shared/schemas/envelope-response.json",
+  "title": "Optional cross-cutting response envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "correlationId": { "type": "string" },
+    "serverTimingMs": { "type": "number", "minimum": 0 },
+    "cacheHit": { "type": "boolean" }
+  }
+}

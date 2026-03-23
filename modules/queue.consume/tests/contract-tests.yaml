@@ -1,0 +1,13 @@
+tests:
+  - name: queue-consume-ok
+    request:
+      subscriptionId: "sub"
+      maxMessages: 1
+    expect:
+      status: "success"
+  - name: queue-consume-invalid
+    request:
+      subscriptionId: ""
+      maxMessages: 1
+    expectError:
+      code: "INVALID_REQUEST"

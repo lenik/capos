@@ -1,0 +1,9 @@
+{
+  "request": {
+    "permission": "gl.post"
+  },
+  "response": {
+    "allowed": false,
+    "reason": "Missing accountant role"
+  }
+}

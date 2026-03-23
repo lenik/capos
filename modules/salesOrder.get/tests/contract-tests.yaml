@@ -1,0 +1,11 @@
+tests:
+  - name: sales-order-get-ok
+    request:
+      salesOrderId: "so-100"
+    expect:
+      status: "success"
+  - name: sales-order-get-not-found
+    request:
+      salesOrderId: "missing"
+    expectError:
+      code: "NOT_FOUND"

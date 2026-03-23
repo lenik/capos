@@ -1,0 +1,9 @@
+{
+  "event": {
+    "salesOrderId": ""
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "salesOrderId is required"
+  }
+}

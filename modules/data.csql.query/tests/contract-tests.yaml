@@ -1,0 +1,13 @@
+tests:
+  - name: data-csql-select-ok
+    request:
+      sql: "SELECT 1 AS n"
+      parameters: {}
+    expect:
+      status: "success"
+  - name: data-csql-mutation-rejected
+    request:
+      sql: "DELETE FROM customers"
+      parameters: {}
+    expectError:
+      code: "INVALID_REQUEST"

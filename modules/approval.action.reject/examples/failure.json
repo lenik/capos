@@ -1,0 +1,10 @@
+{
+  "request": {
+    "approvalRequestId": "missing",
+    "actorId": "usr-2"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Approval request not found"
+  }
+}

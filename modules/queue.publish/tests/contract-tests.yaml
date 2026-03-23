@@ -1,0 +1,13 @@
+tests:
+  - name: queue-publish-ok
+    request:
+      topic: "t"
+      body: {"a": 1}
+    expect:
+      status: "success"
+  - name: queue-publish-invalid
+    request:
+      topic: ""
+      body: {}
+    expectError:
+      code: "INVALID_REQUEST"

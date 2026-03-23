@@ -1,0 +1,12 @@
+{
+  "request": {
+    "shipmentId": "shp-3"
+  },
+  "response": {
+    "shipmentId": "shp-3",
+    "salesOrderId": "so-100",
+    "status": "shipped",
+    "trackingNumber": "1Z999",
+    "lines": []
+  }
+}

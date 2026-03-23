@@ -1,0 +1,12 @@
+{
+  "request": {
+    "bucket": "erp-docs",
+    "objectKey": "2025/so-100/attach.bin",
+    "contentType": "application/octet-stream",
+    "sizeBytes": 2048
+  },
+  "response": {
+    "etag": "\"abc123\"",
+    "versionId": "v1"
+  }
+}

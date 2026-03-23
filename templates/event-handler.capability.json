@@ -1,0 +1,22 @@
+{
+  "capability": {
+    "name": "on.__DOMAIN__.__EVENT__",
+    "version": "1.0.0",
+    "category": "__DOMAIN__",
+    "summary": "Consume __EVENT__ domain events.",
+    "lifecycle": "draft"
+  },
+  "type": "event-handler",
+  "signature": {
+    "model": "event-handler",
+    "eventSchema": "schemas/event.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": false,
+    "sideEffect": true,
+    "transactional": true
+  },
+  "examples": ["examples/success.json", "examples/failure.json"],
+  "tests": { "contractTests": "tests/contract-tests.yaml" }
+}

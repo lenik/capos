@@ -1,0 +1,18 @@
+{
+  "request": {
+    "customerId": "cust-1",
+    "currency": "USD",
+    "lines": [
+      {
+        "itemId": "it-1",
+        "quantity": 2,
+        "unitPrice": 10
+      }
+    ]
+  },
+  "response": {
+    "salesOrderId": "so-100",
+    "status": "draft",
+    "totalAmount": 20
+  }
+}

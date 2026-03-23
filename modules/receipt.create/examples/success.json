@@ -1,0 +1,16 @@
+{
+  "request": {
+    "purchaseOrderId": "po-20",
+    "warehouseId": "wh-01",
+    "lines": [
+      {
+        "itemId": "it-1",
+        "quantity": 5
+      }
+    ]
+  },
+  "response": {
+    "receiptId": "rcpt-2",
+    "status": "posted"
+  }
+}

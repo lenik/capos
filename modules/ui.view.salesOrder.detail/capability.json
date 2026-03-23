@@ -1,0 +1,29 @@
+{
+  "capability": {
+    "name": "ui.view.salesOrder.detail",
+    "version": "1.0.0",
+    "category": "salesOrder",
+    "summary": "Read-only sales order detail view: header, lines, and bound backend capabilities.",
+    "lifecycle": "draft"
+  },
+  "type": "ui",
+  "signature": {
+    "model": "ui-interaction",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json",
+    "uiSchema": "schemas/ui.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

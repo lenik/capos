@@ -1,0 +1,15 @@
+tests:
+  - name: approval-request-create-ok
+    request:
+      resourceType: "purchaseOrder"
+      resourceId: "po-20"
+      policyKey: "default"
+    expect:
+      status: "success"
+  - name: approval-request-create-invalid
+    request:
+      resourceType: ""
+      resourceId: "x"
+      policyKey: "p"
+    expectError:
+      code: "INVALID_REQUEST"

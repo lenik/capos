@@ -1,0 +1,11 @@
+tests:
+  - name: quotation-get-ok
+    request:
+      quotationId: "qt-50"
+    expect:
+      status: "success"
+  - name: quotation-get-not-found
+    request:
+      quotationId: "missing"
+    expectError:
+      code: "NOT_FOUND"

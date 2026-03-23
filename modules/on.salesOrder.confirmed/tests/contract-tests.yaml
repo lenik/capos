@@ -1,0 +1,13 @@
+tests:
+  - name: on-sales-order-confirmed-ok
+    request:
+      salesOrderId: "so-100"
+      confirmedAt: "2025-03-23T10:00:00Z"
+      confirmedBy: "usr-1"
+    expect:
+      status: "success"
+  - name: on-sales-order-confirmed-invalid
+    request:
+      salesOrderId: ""
+    expectError:
+      code: "INVALID_REQUEST"

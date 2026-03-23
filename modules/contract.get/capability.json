@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "contract.get",
+    "version": "1.0.0",
+    "category": "contract",
+    "summary": "Retrieve a contract header (customer, dates, status) by id.",
+    "lifecycle": "draft"
+  },
+  "type": "service",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

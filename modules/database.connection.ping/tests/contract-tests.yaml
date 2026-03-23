@@ -1,0 +1,11 @@
+tests:
+  - name: database-ping-ok
+    request:
+      connectionHandle: "dbh-1"
+    expect:
+      status: "success"
+  - name: database-ping-bad-handle
+    request:
+      connectionHandle: "expired"
+    expectError:
+      code: "NOT_FOUND"

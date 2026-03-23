@@ -1,0 +1,13 @@
+tests:
+  - name: inventory-outbound-ok
+    request:
+      warehouseId: "wh-01"
+      lines: [{"itemId": "it-1", "quantity": 1}]
+    expect:
+      status: "success"
+  - name: inventory-outbound-invalid
+    request:
+      warehouseId: "wh-01"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

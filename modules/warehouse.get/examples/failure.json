@@ -1,0 +1,9 @@
+{
+  "request": {
+    "warehouseId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Warehouse not found"
+  }
+}

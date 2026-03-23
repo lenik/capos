@@ -1,0 +1,21 @@
+{
+  "request": {
+    "codePrefix": "4",
+    "page": {
+      "limit": 50
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "accountId": "acc-4000",
+        "code": "4000",
+        "name": "Revenue",
+        "accountType": "revenue"
+      }
+    ],
+    "page": {
+      "hasMore": false
+    }
+  }
+}

@@ -1,0 +1,13 @@
+tests:
+  - name: object-delete-ok
+    request:
+      bucket: "b"
+      objectKey: "k"
+    expect:
+      status: "success"
+  - name: object-delete-not-found
+    request:
+      bucket: "b"
+      objectKey: "missing"
+    expectError:
+      code: "NOT_FOUND"

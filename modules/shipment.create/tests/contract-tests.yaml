@@ -1,0 +1,15 @@
+tests:
+  - name: shipment-create-ok
+    request:
+      salesOrderId: "so-100"
+      warehouseId: "wh-01"
+      lines: [{"itemId": "it-1", "quantity": 1}]
+    expect:
+      status: "success"
+  - name: shipment-create-invalid
+    request:
+      salesOrderId: "so-100"
+      warehouseId: "wh-01"
+      lines: []
+    expectError:
+      code: "INVALID_REQUEST"

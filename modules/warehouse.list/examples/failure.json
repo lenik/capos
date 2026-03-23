@@ -1,0 +1,11 @@
+{
+  "request": {
+    "page": {
+      "limit": 10000
+    }
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "limit exceeds maximum"
+  }
+}

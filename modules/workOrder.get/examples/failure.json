@@ -1,0 +1,9 @@
+{
+  "request": {
+    "workOrderId": "missing"
+  },
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "Work order not found"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "request": {
+    "status": "open",
+    "page": {
+      "limit": 10
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "taskId": "tsk-1",
+        "title": "Approve PO",
+        "status": "open",
+        "assignee": "usr-2"
+      }
+    ],
+    "page": {
+      "hasMore": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "workOrderId": "wo-77"
+  },
+  "response": {
+    "workOrderId": "wo-77",
+    "itemId": "it-fg-1",
+    "quantity": 100,
+    "plantId": "plant-01",
+    "status": "inProgress"
+  }
+}

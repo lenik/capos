@@ -1,0 +1,14 @@
+{
+  "request": {
+    "provider": "stripe",
+    "eventId": "evt_123",
+    "payload": {
+      "type": "charge.succeeded"
+    },
+    "signature": "v1=abc"
+  },
+  "response": {
+    "accepted": true,
+    "dedupeKey": "stripe:evt_123"
+  }
+}

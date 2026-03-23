@@ -1,0 +1,9 @@
+{
+  "request": {
+    "bucket": "erp-docs",
+    "objectKey": "2025/a.bin"
+  },
+  "response": {
+    "deleted": true
+  }
+}

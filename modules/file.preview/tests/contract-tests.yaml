@@ -1,0 +1,12 @@
+tests:
+  - name: file-preview-ok
+    request:
+      fileId: "fil-9a2"
+      variant: "thumb"
+    expect:
+      status: "success"
+  - name: file-preview-not-found
+    request:
+      fileId: "missing"
+    expectError:
+      code: "NOT_FOUND"

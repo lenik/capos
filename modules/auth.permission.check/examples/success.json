@@ -1,0 +1,9 @@
+{
+  "request": {
+    "permission": "salesOrder.read",
+    "resourceId": "so-9"
+  },
+  "response": {
+    "allowed": true
+  }
+}

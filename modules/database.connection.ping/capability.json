@@ -1,0 +1,28 @@
+{
+  "capability": {
+    "name": "database.connection.ping",
+    "version": "1.0.0",
+    "category": "database",
+    "summary": "Verify a pooled DB connection handle is alive (resource layer; distinct from data.csql.query).",
+    "lifecycle": "draft"
+  },
+  "type": "resource",
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": true,
+    "sideEffect": false,
+    "transactional": false
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

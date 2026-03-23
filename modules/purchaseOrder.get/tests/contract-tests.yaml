@@ -1,0 +1,11 @@
+tests:
+  - name: purchase-order-get-ok
+    request:
+      purchaseOrderId: "po-20"
+    expect:
+      status: "success"
+  - name: purchase-order-get-not-found
+    request:
+      purchaseOrderId: "missing"
+    expectError:
+      code: "NOT_FOUND"

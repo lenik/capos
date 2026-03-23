@@ -1,0 +1,21 @@
+{
+  "request": {
+    "parentOrgUnitId": "ou-root",
+    "page": {
+      "limit": 20
+    }
+  },
+  "response": {
+    "items": [
+      {
+        "orgUnitId": "ou-east",
+        "code": "EAST",
+        "name": "East Region",
+        "orgUnitType": "region"
+      }
+    ],
+    "page": {
+      "hasMore": false
+    }
+  }
+}

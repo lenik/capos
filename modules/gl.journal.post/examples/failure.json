@@ -1,0 +1,11 @@
+{
+  "request": {
+    "postingDate": "2025-03-23",
+    "description": "x",
+    "lines": []
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "at least two lines required"
+  }
+}

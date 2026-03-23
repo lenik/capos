@@ -1,0 +1,9 @@
+{
+  "request": {
+    "namespace": "pricing",
+    "key": "missing"
+  },
+  "response": {
+    "hit": false
+  }
+}

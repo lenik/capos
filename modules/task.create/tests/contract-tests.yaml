@@ -1,0 +1,13 @@
+tests:
+  - name: task-create-ok
+    request:
+      title: "T"
+      assignee: "usr-1"
+    expect:
+      status: "success"
+  - name: task-create-invalid
+    request:
+      title: ""
+      assignee: "usr-1"
+    expectError:
+      code: "INVALID_REQUEST"

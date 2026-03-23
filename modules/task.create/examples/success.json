@@ -1,0 +1,10 @@
+{
+  "request": {
+    "title": "Approve PO",
+    "assignee": "usr-2"
+  },
+  "response": {
+    "taskId": "tsk-1",
+    "status": "open"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "request": {
+    "businessPartnerId": "cust-1",
+    "currency": "USD",
+    "lines": [
+      {
+        "description": "Line",
+        "amount": 25
+      }
+    ]
+  },
+  "response": {
+    "billId": "apb-1",
+    "status": "open"
+  }
+}

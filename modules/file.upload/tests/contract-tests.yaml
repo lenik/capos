@@ -1,0 +1,15 @@
+tests:
+  - name: file-upload-ok
+    request:
+      fileName: "a.bin"
+      contentType: "application/octet-stream"
+      sizeBytes: 10
+    expect:
+      status: "success"
+  - name: file-upload-invalid-name
+    request:
+      fileName: ""
+      contentType: "application/octet-stream"
+      sizeBytes: 1
+    expectError:
+      code: "INVALID_REQUEST"

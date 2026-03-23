@@ -1,0 +1,11 @@
+{
+  "request": {
+    "purchaseRequestId": "pr-10"
+  },
+  "response": {
+    "purchaseRequestId": "pr-10",
+    "requestorId": "usr-1",
+    "status": "submitted",
+    "lines": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "warehouseId": "wh-01"
+  },
+  "response": {
+    "warehouseId": "wh-01",
+    "code": "EAST-01",
+    "name": "East DC",
+    "status": "active",
+    "address": {}
+  }
+}

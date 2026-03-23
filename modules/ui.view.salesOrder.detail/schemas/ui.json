@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "viewKind",
+    "bindings"
+  ],
+  "properties": {
+    "viewKind": {
+      "const": "salesOrder.detail"
+    },
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "getCapability"
+      ],
+      "properties": {
+        "getCapability": {
+          "type": "string"
+        },
+        "customerLookupCapability": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
