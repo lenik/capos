@@ -1,0 +1,20 @@
+{
+  "request": {
+    "sql": "SELECT id, name FROM items WHERE status = :st LIMIT :lim",
+    "parameters": {
+      "st": "active",
+      "lim": 10
+    },
+    "maxRows": 100
+  },
+  "response": {
+    "columns": ["id", "name"],
+    "rows": [
+      {
+        "id": "it-1",
+        "name": "Bolt"
+      }
+    ],
+    "truncated": false
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://cap.local/samples/_shared/schemas/date.json",
-  "title": "Calendar date",
-  "type": "string",
-  "format": "date"
-}

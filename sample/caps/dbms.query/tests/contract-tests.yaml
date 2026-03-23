@@ -1,0 +1,13 @@
+tests:
+  - name: dbms-query-select-one
+    request:
+      sql: "SELECT 1 AS n"
+      parameters: {}
+    expect:
+      status: success
+  - name: dbms-query-mutation-rejected
+    request:
+      sql: "DELETE FROM chat_sessions"
+      parameters: {}
+    expectError:
+      code: INVALID_REQUEST

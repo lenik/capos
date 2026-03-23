@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/sample/caps/_shared/schemas/code-name.json",
+  "title": "Code and display name",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["code", "name"],
+  "properties": {
+    "code": { "type": "string" },
+    "name": { "type": "string" }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "sql": "UPDATE items SET qty = :q WHERE id = :id",
+    "parameters": {
+      "q": 5,
+      "id": "it-1"
+    }
+  },
+  "response": {
+    "affectedRows": 1
+  }
+}

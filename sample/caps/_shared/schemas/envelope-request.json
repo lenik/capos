@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/sample/caps/_shared/schemas/envelope-request.json",
+  "title": "Optional cross-cutting request envelope",
+  "description": "Wrap capability-specific payloads when platforms need correlation, locale, or tenant hints.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "correlationId": { "type": "string" },
+    "tenantId": { "type": "string" },
+    "clientLocale": { "type": "string" },
+    "requestedBySubjectId": { "type": "string" }
+  }
+}

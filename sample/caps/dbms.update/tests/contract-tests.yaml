@@ -1,0 +1,13 @@
+tests:
+  - name: dbms-update-ddl-contract-table
+    request:
+      sql: "CREATE TABLE IF NOT EXISTS _dbms_contract (id INTEGER PRIMARY KEY)"
+      parameters: {}
+    expect:
+      status: success
+  - name: dbms-update-insert-row
+    request:
+      sql: "INSERT INTO _dbms_contract (id) VALUES (42)"
+      parameters: {}
+    expect:
+      status: success

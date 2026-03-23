@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["command", "params"],
+  "properties": {
+    "uiContext": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Opaque UI shell context (route, theme, locale)."
+    },
+    "command": {
+      "type": "string",
+      "description": "Headless command id (same entry point as bound GUI actions).",
+      "enum": ["chat.openWindow", "chat.sendMessage", "chat.refreshThread"]
+    },
+    "params": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Command-specific parameters (MVVM: command parameter bag)."
+    },
+    "sessionId": {
+      "type": "string",
+      "description": "Active chat session; optional if implementation tracks a single active session per adapter."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cap.local/sample/caps/_shared/schemas/timestamp.json",
+  "title": "RFC 3339 instant",
+  "type": "string",
+  "format": "date-time"
+}

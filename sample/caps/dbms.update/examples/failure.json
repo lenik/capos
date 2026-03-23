@@ -1,0 +1,10 @@
+{
+  "request": {
+    "sql": "UPDATE missing_table SET x = 1",
+    "parameters": {}
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "no such table"
+  }
+}

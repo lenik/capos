@@ -1,0 +1,10 @@
+{
+  "request": {
+    "sql": "INVALID SQL",
+    "parameters": {}
+  },
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "SQL parse error"
+  }
+}

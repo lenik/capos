@@ -1,0 +1,28 @@
+{
+  "$schema": "../../../schemas/modulespec.schema.json",
+  "module": {
+    "id": "contactbook",
+    "name": "Contact book (reference)",
+    "version": "0.1.0",
+    "description": "In-memory reference implementation of contact.* capabilities for captest.",
+    "runtime": {
+      "language": "python",
+      "packagePath": "contactbook",
+      "entry": "contactbook.cap_impl:ContactBookAdapter"
+    },
+    "implements": [
+      "contact.create",
+      "contact.get",
+      "contact.update",
+      "contact.delete",
+      "contact.list"
+    ],
+    "requiresCapabilities": [],
+    "lifecycle": {
+      "handlesPlatformLifecycle": false
+    }
+  },
+  "testing": {
+    "captestPrefix": "contact."
+  }
+}

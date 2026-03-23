@@ -1,0 +1,44 @@
+{
+  "capability": {
+    "name": "dbms.update",
+    "version": "1.0.0",
+    "category": "dbms",
+    "summary": "Execute a SQL statement that may mutate database state (INSERT, UPDATE, DELETE, DDL).",
+    "lifecycle": "draft"
+  },
+  "type": "data",
+  "runtime": {
+    "requiredEnvironment": [
+      {
+        "name": "CAP_SQLITEDB_PATH",
+        "description": "When using the sqlitedb module: filesystem path to the SQLite database file.",
+        "optional": true,
+        "secret": false
+      },
+      {
+        "name": "CAP_POSTGRESDB_URL",
+        "description": "When using the postgresdb module: PostgreSQL connection URI.",
+        "optional": true,
+        "secret": true
+      }
+    ]
+  },
+  "signature": {
+    "model": "request-response",
+    "requestSchema": "schemas/request.json",
+    "responseSchema": "schemas/response.json",
+    "errorSchema": "schemas/error.json"
+  },
+  "semantics": {
+    "idempotent": false,
+    "sideEffect": true,
+    "transactional": true
+  },
+  "examples": [
+    "examples/success.json",
+    "examples/failure.json"
+  ],
+  "tests": {
+    "contractTests": "tests/contract-tests.yaml"
+  }
+}

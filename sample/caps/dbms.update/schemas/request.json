@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sql", "parameters"],
+  "properties": {
+    "sql": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
